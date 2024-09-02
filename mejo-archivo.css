@@ -1,0 +1,902 @@
+
+html,body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Inter', sans-serif;
+   position: relative;  
+ }
+ 
+ .cortina{
+  font-size: 30px;
+  background-color: blueviolet;
+}
+ .computador{
+  background-color: rgb(69, 69, 230);
+  height: auto;
+  padding-left: 30px;
+  padding-right: 80px;
+  display: flex;
+  position: relative; 
+  justify-content: space-between
+}
+
+ .parrafo{
+    color: black;
+ }
+
+.secion-de-menu-desplegable{
+  background-color: brown;
+  width: 90px;
+  height: 80px;
+  position: relative;
+}
+
+ .imagen-milon{
+   width: 70px;
+   height: 70px;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 50%;
+   margin-top: 5px;
+ }
+ 
+.cortina-negra a{
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  height: 30px;
+  display: block;
+  position: relative;
+  color: black;
+}
+
+.mejor-buscador-del-mundo{
+  width: 100%;
+  margin-top: 4px;
+  position: absolute;
+  z-index: 1;
+  top:100%;
+  right: 140%;
+  display: none;
+}
+
+.quiero-poner-mas-grande-mi-buscador{
+  height: 30px;
+  border-radius: 5px;
+  display: block;
+  box-shadow:  2px 2px 1px 1px rgb(233, 126, 126);
+  border: 1px solid black
+}
+
+.boton-buscador-de-idioma{
+  border-radius: 5px;
+  width: 90px;
+  height: 30px;
+  display: block;
+  margin-left: 35px;
+  margin-top: 2px;
+}
+.boton-buscador-de-idioma:hover{
+  box-shadow:  2px 2px 3px 3px rgb(233, 126, 126);
+  color: white;
+  background-color: rgb(61, 61, 240);
+  border: 3px solid black
+}
+  
+
+.cortina-negra a:hover{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  padding-top: 10px;
+  box-shadow:  2px 2px 5px 5px rgb(233, 126, 126);
+  border: 1px solid black
+}
+
+
+.cortina-negra{
+  position: absolute;
+  top: 100%;
+  width: 200px;
+  height: 250px;
+  padding: 5px 5px 5px 5px;
+  display: none;
+  right: 25px;
+  border-radius: 5px;
+  background-color: blueviolet;
+  overflow-y: auto;
+   /* Oculta la barra de scroll en Chrome, Safari y Opera */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer y Edge */
+}
+.imagen-milon:hover{
+  border: 3px solid black
+}
+
+.secion-de-menu-desplegable:hover .div-indicador-de-direccion,
+.secion-de-menu-desplegable:hover .cortina-negra,
+.secion-de-menu-desplegable:hover  .mejor-buscador-del-mundo {
+  display: block;
+  border-radius: 5px ;
+}  
+
+
+
+.div-indicador-de-direccion{
+  width: 190px;
+  height: 50px;
+  position: absolute;
+  background-color: rgb(93, 93, 245);
+  margin-bottom: 40px;
+  position: -webkit-sticky; /* Para compatibilidad con navegadores webkit */
+  top: 360%;
+  right: 38%;
+  display: none;
+  border: 1px solid black
+}
+
+ .hola{
+    color: white;
+    margin-left: 5%;
+    height: 90PX;
+    width: 210px;
+}   
+
+ .palo{
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   height: auto;
+   margin: 0;
+   padding: 0;
+   padding-bottom: 20px; 
+   background-color: rgb(36, 36, 214);
+   
+ }  
+
+.celular{
+    height: 90px;
+    width: 300px;
+    background-color: aqua;
+    display: flex;
+    margin-top: 40px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+ .cable{
+  text-decoration: none;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  height: 40px;
+  padding-top: 18px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
+  
+ }
+
+.nadarmas{
+    text-decoration: none;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+ /* aqui empiesa el hove para hacer interatual la etiqueta nave */
+ .nadarmas:hover{
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  height: 30px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 60px;
+  border: 1px solid black
+ }
+
+ .cable:hover{
+  text-decoration: none;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: white;
+  height: 30px;
+  padding-top: 18px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 10px;
+  border: 1px solid black
+ }
+
+ /* aqui termina el hove para hacer interatual la etiqueta nave */
+.teclado{
+    margin: 0;
+    padding: 4%;
+    background-color: rgb(243, 241, 241);
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('imagen/paisaje.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+}
+ 
+.rio{
+ height: 500px;
+ width: 95%;
+ background-color: aqua;
+ margin-left: auto;
+ margin-right: auto;
+ border-radius: 5px;
+ overflow: hidden;
+ position: relative;
+ overflow: auto; 
+}
+
+.negro{
+  background-color: rgb(223, 219, 219);
+  height: auto;
+  width: 70%;
+  left: 15%;
+  bottom: 0%;
+  border-radius: 10px 10px 0 0;
+  position: -webkit-sticky; /* Para compatibilidad con navegadores webkit */
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  
+}
+
+.carlos{
+  height: 300px;
+  width: 100%;
+  background-color: rgb(45, 44, 44);
+}
+
+
+.oro{
+  height: 200px;
+  width: 95%;
+  background-color: red;
+  margin-left: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: auto;
+  border-radius: 5px;
+} 
+
+.vazo-rojo{
+  margin-left: auto; 
+  margin-right: auto;
+  text-decoration: none;
+  background-color: aquamarine;
+  height: 60px;
+  width: 80px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-top: 20;
+  padding-left: 10px;
+  overflow: hidden;
+  padding-right: 10px;
+  
+}
+
+.tamaño{
+  border-radius: 50%;
+  background-color: black;
+  margin-bottom: 10px;
+  width: 52px;
+  height: 50px;
+  border: 1px solid black
+  
+}
+
+/* aqui modificaremos la pantalla depende de que tamaño tenga */
+    
+    
+    @media (max-width: 700px){
+     .celular{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .imagen-milon{
+      margin-left: 50%;  
+    }
+  }
+
+/* aqui termina nuestra modificacio de pantalla dependiendo que porsentaje tenga la pantalla */
+
+
+/* aquiva todo el css para mi registro.html*/
+ .bolso-para-ver{
+   background-color: rgb(49, 49, 49);
+ }
+  
+ .mesa-silla{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  border-radius: 0 0 10px 10px;
+  border: 2px solid black
+ }
+
+.pony-dulce{
+  background-color: blue;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  width: 400px;
+  margin-top: 10px;
+}
+
+.valde-basura{
+ color: white;
+ text-align: center;
+ margin-left: 10px;
+}
+
+.flecha-para-decorar{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.flecha-para-decorar:hover{
+  margin-bottom: 3px;
+  border: 2px solid black
+}
+
+
+.mi-enlace-a-otra-pagina-web{
+  background-color: brown;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.centrar-este-titulo{
+  text-align: center;
+}
+
+.moto-negra-flex{
+  width: 90%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.moto-negra-flex label{
+  display: block;
+  background-color: blue;
+  width: 70%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.moto-negra-flex .plastico-blanco {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 5px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+ .boton-registro{
+  display: block;
+  height: 30px;
+  width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.boton-registro:hover{
+  border: 3px solid black
+}
+/* aqui termina  el css para mi registro.html*/
+
+
+
+/* aquiva todo el css para michat.html*/
+ .cielorazo{
+  background-color: rgb(31, 30, 30);
+ }
+ .mejor-balde{
+  width: 400px;
+  height: 100px;
+  background-color: rgb(69, 42, 165);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+ }
+
+ .logo{
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+ }
+
+ .celular-negro{
+   width: 60px;
+   height: 60px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+   border-radius: 50%;
+
+ }
+
+ .mejor-encabezado{
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ .mejor-pies-de-pagina{
+  background-color: rgb(69, 42, 165);
+  width: 400px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+ }
+  
+ .h2-diseño{
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  font-size: 30px;
+ }
+
+ .chat-contacto{
+   width: 72px;
+   height: 70px;
+   border-radius: 50%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 15px;
+   border: 1px solid black
+ }
+/* aqui termina todo el css para michat.html*/
+
+/* aqui empiesa el todo el diseño de pagina-login.html*/
+  .mi-body-mejor-programa{
+    margin: 0;
+    padding: 0;
+    background-image: url('imagen/imagen-noche.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+  }
+  .header-para-pagina{
+    height: 80px;
+    width: 90%;
+    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 5px 5px;
+    padding-top: 20px;
+    padding-left: 15px;
+    display: flex;
+    padding-bottom: 20px;
+  }
+  .este-es-mi-reservaplanet{
+    color: white;
+  }
+
+   .llegaron-las-lavadoras{
+     margin-left: auto;
+     margin-right: auto;
+     height: 75px;
+     width: 75px;
+     border-radius: 50%;
+     background-color: brown;
+   }
+  
+  .nuve-de-hierro{
+    width: 50%;
+    min-height: 470px;
+    background-color: rgb(63, 63, 248);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid black
+  }
+  
+  .bienvenido-a-reserva-plane{
+    width: 50%;
+    height: 80px;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-top: 10px;
+    border: 1px solid black
+  }
+
+  .lluvia-fuerte{
+    color: black;
+    text-align: center;
+  }
+
+  .pies-de-pagina{
+    height: 80px;
+    width: 90%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .login-form{
+    width: 80%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  .login-form h3{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+
+  .login-form label {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+ 
+.login-form input[type="email"],
+.login-form input[type="password"]{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.login-form button{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80px;
+  margin-top: 10px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+ 
+.login-form button:hover{
+  border: 4px solid black
+}
+.rosca-de-oro{
+
+  height: 70px;
+  width: 90%;
+  margin-top: 40px;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cuaderno-cuadrado{
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px 5px 5px 5px;
+  height: auto;
+  
+}
+
+.cuaderno-cuadrado:hover{
+  background-color: gray;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid black
+}
+
+.pagina-con-boligrafo{
+  font-size: 17px;
+  color: white;
+}
+
+/* aqui termina el todo el diseño de pagina-login.html*/
+
+
+/* aqui empiesa todo el diseño de reserva-echa-.html*/
+.quiero-que-toda-la-patalla-no-tenga-margen{
+   background-color: rgb(80, 79, 79);
+   margin: 0;
+   padding: 0;
+}
+.todas-las-reservas-echas{
+  width: 480px;
+  height: 80px;
+  background-color: rgb(53, 53, 240);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: flex;
+  border-radius:5px 5px 0 0;
+  box-shadow: 0px 0px 5px 0px rgb(241, 95, 95);
+  border: 1px solid black
+}
+
+.haga-su-reserva{
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: 1px solid black
+}
+ 
+.haga-su-reserva:hover{
+  border: 3px solid black
+}
+.haga-su-reserva-desde-el-teclado{
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
+.quiero-centrar-este-titulo{
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+.historial-de-tus-reservas{
+  width: 480px;;
+  height: auto;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.titulo-historial-de-tus-reservas{
+  text-align: center;
+  margin: 0;
+}
+
+.navegador-a-las-diferentes-reservas{
+  width: 98%;
+  height: 70px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3px;
+  box-shadow: 0px 5px 5px 5px rgb(151, 149, 149);
+ 
+}
+
+.botones-de-las-reservas-echa{
+  margin-left: auto;
+  margin-right: auto;
+  
+  height: 30px;
+  padding: 15px 10px 10px 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.botones-de-las-reservas-echa:hover{
+  border-radius:10px;
+  border: 3px solid black
+}
+.cuerpo-de-mi-pagina-web-milo{
+  width: 480px;
+  height: 350px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cuaderno-sucio-y-cochino{
+  width: 480px;
+  height: 80px;
+  background-color: rgb(53, 53, 240);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:0 0 5px 5px;
+  box-shadow: 0px 0px 5px 0px rgb(241, 95, 95);
+}
+
+
+/* aqui termina todo el diseño de reserva-echa-.html*/
+
+
+/* aqui empiesa mi pagina-login.html todo lo que tiene que ver con el perfil-personal.html */
+
+.encavezado-para-todos-los-perfiles{
+  width: 450px;
+  height: 80px;
+  background-color: blue;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  margin-top: 10px;
+  border: 1px solid black;
+}
+
+.titulo-de-reservaPlanet-ahora-si{
+   color: white;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 30px;
+}
+.se-daño-mi-celular{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7px;
+}
+
+.imagen-reservaplanet-para-el-servidor{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.tamaño-de-la-mejor-imagen{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin distorsionarse */
+  object-position: center;  /* Centra la imagen dentro del contenedor */
+}
+
+
+.imagen-reservaplanet-para-el-servidor:hover{
+  border: 3px solid black;
+  box-shadow: 1px 1px 1px 1px rgb(240, 135, 135);
+}
+
+.ancho-y-largo-de-mi-perfil{
+  width: 450px;
+  height: 400px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  border: 0.5px solid black;
+}
+
+.titulo-de-perfil-persona-para-htem{
+  margin: 0;
+  text-align: center;
+}
+
+.contenedor-para-el-mejor-perfil-del-mundo{
+  height: 90px;
+  width: 80px;
+  background-color: blue;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-top: 4px;
+  overflow: hidden; /* Esto asegura que la imagen no se salga del contenedor */
+  position: relative;
+}
+
+.rio-pance-lo-mejor{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+  margin-top: 5px;
+  color: black;
+}
+
+.aqui-va-todo-para-que-obserbe{
+  width: 95%;
+  height: 250px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  box-shadow: 0px 2px 2px 2px rgb(240, 123, 123);
+}
+
+.quiero-quitarle-el-marge-a-este-div{
+   margin-top: 0;
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 5px;
+}
+/* aqui termina mi pagina-login.html todo lo que tiene que ver con el perfil-personal.html */
+
+
+/* aqui empiesa el archivo de verificacion de correo*/
+ 
+.body-contenedor-padre-para-el-correo{
+   width: 100%;
+   height: 200px;
+   background-color: yellow;
+   display: flex;
+   box-shadow: 2px  color(rec2020 red green blue);
+}
+
+.contenedor-de-toda-la-accion{
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  margin-top: 70px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.primer-contenedor-diferente{
+  width: 100%;
+  height: 70px;
+  background-color: rgb(59, 59, 233);
+  border-radius: 5px 5px 0 0;
+  display: flex;
+}
+
+.enlace-verificacion-de-enlace{
+  width: 60px;
+  height: 60px;
+  background-color: brown;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3px;
+}
+
+.lapicelo-rojo-o-verde{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.enlace-verificacion-de-enlace:hover{
+  border: 3px solid black;
+}
+
+/* aqui empiesa el archivo de verificacion de correo*/
