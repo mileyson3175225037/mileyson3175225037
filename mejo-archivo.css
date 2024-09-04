@@ -31,7 +31,7 @@ html,body {
   position: relative;
 }
 
- .imagen-milon{
+.imagen-milon{
    width: 70px;
    height: 70px;
    margin-left: auto;
@@ -40,6 +40,9 @@ html,body {
    margin-top: 5px;
  }
  
+.cortina-negra {
+   border: 2px solid black
+ }
 .cortina-negra a{
   background-color: white;
   text-decoration: none;
@@ -52,29 +55,31 @@ html,body {
 
 .mejor-buscador-del-mundo{
   width: 100%;
-  margin-top: 4px;
-  position: absolute;
-  z-index: 1;
-  top:100%;
-  right: 140%;
+  margin-left: auto;
+  margin-right: auto;
   display: none;
+  background-color: rgb(163, 163, 163);
+  border: 1px solid black
 }
 
 .quiero-poner-mas-grande-mi-buscador{
   height: 30px;
-  border-radius: 5px;
-  display: block;
-  box-shadow:  2px 2px 1px 1px rgb(233, 126, 126);
+  margin-left: auto;
+  margin-right: auto;
+  width: 97%;
+  border-radius: 5px 5px 1px 1px;
   border: 1px solid black
 }
 
 .boton-buscador-de-idioma{
   border-radius: 5px;
-  width: 90px;
+  width: 100px;
   height: 30px;
   display: block;
-  margin-left: 35px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 2px;
+  margin-bottom: 2px;
 }
 .boton-buscador-de-idioma:hover{
   box-shadow:  2px 2px 3px 3px rgb(233, 126, 126);
@@ -120,19 +125,72 @@ html,body {
   border-radius: 5px ;
 }  
 
-
-
 .div-indicador-de-direccion{
-  width: 190px;
+  width: 196px;
   height: 50px;
   position: absolute;
   background-color: rgb(93, 93, 245);
   margin-bottom: 40px;
-  position: -webkit-sticky; /* Para compatibilidad con navegadores webkit */
+  display: flex;
   top: 360%;
   right: 38%;
   display: none;
-  border: 1px solid black
+  border: 1px solid black;
+
+}
+
+.icono-para-arregla{
+  margin-left: auto;
+  margin-right: auto;
+  
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.icono-para-arregla i{
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: white;
+  height: 15px;
+  width: 16px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.icono-para-arregla i:hover{
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%
+  
+}
+.enlace-moneda{
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: 20px;
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+}
+
+.enlace-moneda:hover{
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  margin-top: 3px;
 }
 
  .hola{
