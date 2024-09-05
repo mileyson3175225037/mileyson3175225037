@@ -6,7 +6,9 @@
     <title>ReservaPlanet</title>
     <link rel="stylesheet" href="mejo-archivo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/5.0.0/css/flag-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons/css/flag-icons.min.css">
+  </head>
+  
 </head>
 <body>
 
@@ -20,15 +22,15 @@
           
              <img class="imagen-milon" src="imagen/lavadora-en-alquiler.png" alt="">
 
-           <nav class="cortina-negra">
+           <nav id="scrollContainer" class="cortina-negra">
             <form class="mejor-buscador-del-mundo" action="">
               <input class="quiero-poner-mas-grande-mi-buscador" type="text" placeholder="busca tu idioma">
               <button class="boton-buscador-de-idioma" type="submit">buscar</button>
             </form>
-              <a class="efecto.hove-mejor" href=""><span class="flag-icon flag-icon-us"></span> ingles</a>
-              <a class="efecto.hove-mejor" href="">español</a>
-              <a class="efecto.hove-mejor" href="">france</a>
-              <a class="efecto.hove-mejor" href="">portugues</a>
+              <a class="efecto.hove-mejor" href=""><span class="fi fi-us"></span> ingles</a>
+              <a class="efecto.hove-mejor" href=""><span class="fi fi-es"></span> español</a>
+              <a class="efecto.hove-mejor" href=""><span class="fi fi-fr"></span> france</a>
+              <a class="efecto.hove-mejor" href=""><span class="fi fi-pt"></span> portugues</a>
               <a class="efecto.hove-mejor" href="">helicoptero</a>
               <a class="efecto.hove-mejor" href="">radio</a>
               <a class="efecto.hove-mejor" href="">patron</a>
@@ -40,8 +42,8 @@
            </nav>
            <div class="div-indicador-de-direccion">
              <div class="icono-para-arregla">
-              <i class="fas fa-arrow-up"></i>
-              <i class="fas fa-arrow-down"></i>
+              <i id="flecha-arriva" class="fas fa-arrow-up"></i>
+              <i id="flecha-abajo" class="fas fa-arrow-down"></i>
               <a class="enlace-moneda" href=""><span class="fas fa-coins"></span> tu moneda</a>
             </div>
            </div>
@@ -49,7 +51,6 @@
     </header>
        
         <nav class="palo">
-         
           <a class="nadarmas" href=""><i class="fa-solid fa-plane-departure"></i> vuelos</a> 
           <a class="nadarmas" href=""> <i class="fas fa-home"></i> alojamiento para reservar</a> 
           <a class="nadarmas" href=""><i class="fas fa-shield-alt"></i> seguros de viajes</a>
@@ -117,5 +118,6 @@
             <h2>alojamiento disponible</h2>
       </footer> 
        <!--aqui termina el footer de mi pagina web  --> 
+       <script src="mejor-archivo.js"></script>
 </body>
 </html>

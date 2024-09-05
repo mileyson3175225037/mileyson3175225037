@@ -98,7 +98,6 @@ html,body {
   border: 1px solid black
 }
 
-
 .cortina-negra{
   position: absolute;
   top: 100%;
@@ -147,6 +146,13 @@ html,body {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.flag-icon {
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  background-size: cover;
 }
 
 .icono-para-arregla i{
