@@ -24,12 +24,12 @@
 
            <nav id="scrollContainer" class="cortina-negra">
             <form class="mejor-buscador-del-mundo" action="">
-              <input class="quiero-poner-mas-grande-mi-buscador" type="text" placeholder="busca tu idioma">
+              <input id="searchInput" class="quiero-poner-mas-grande-mi-buscador" type="text" placeholder="busca tu idioma">
               <button class="boton-buscador-de-idioma" type="submit">buscar</button>
             </form>
-              <a class="efecto.hove-mejor" href=""><span class="fi fi-us"></span> ingles</a>
-              <a class="efecto.hove-mejor" href=""><span class="fi fi-es"></span> español</a>
-              <a class="efecto.hove-mejor" href=""><span class="fi fi-fr"></span> france</a>
+              <a id="traductor-ingles" class="efecto.hove-mejor" href="#"><span class="fi fi-us"></span> ingles</a>
+              <a id="traductor-español" class="efecto.hove-mejor" href="#"><span class="fi fi-es"></span> español</a>
+              <a id="my-frances" class="efecto.hove-mejor" href="#"><span class="fi fi-fr"></span> france</a>
               <a class="efecto.hove-mejor" href=""><span class="fi fi-pt"></span> portugues</a>
               <a class="efecto.hove-mejor" href="">helicoptero</a>
               <a class="efecto.hove-mejor" href="">radio</a>
@@ -51,10 +51,10 @@
     </header>
        
         <nav class="palo">
-          <a class="nadarmas" href=""><i class="fa-solid fa-plane-departure"></i> vuelos</a> 
-          <a class="nadarmas" href=""> <i class="fas fa-home"></i> alojamiento para reservar</a> 
-          <a class="nadarmas" href=""><i class="fas fa-shield-alt"></i> seguros de viajes</a>
-          <a class="nadarmas" href=""><i class="fa-solid fa-taxi"></i> taxi aeropuerto</a>
+          <a class="nadarmas" href="#"><span class="fa-solid fa-plane-departure"></span> <span id="motosucia-lipiesa">vuelos</span></a> 
+          <a class="nadarmas" href="#"> <span class="fas fa-home"></span> <span id="tijera-identificada">alojamiento para reservar</span></a> 
+          <a class="nadarmas" href=""><i class="fas fa-shield-alt"></i> <span id="insuranceDisplay">seguros de viajes</span></a>
+          <a class="nadarmas" href=""><i class="fa-solid fa-taxi"></i> <span id="taxiDisplay">taxi aeropuerto</span></a>
          
          <nav class="celular"> 
             <a class="cable" href="pagina-login.html">iniciar cesion</a>
@@ -118,6 +118,9 @@
             <h2>alojamiento disponible</h2>
       </footer> 
        <!--aqui termina el footer de mi pagina web  --> 
+       
+
+       <script src="traductor-i18n.js"></script>
        <script src="mejor-archivo.js"></script>
 </body>
 </html>

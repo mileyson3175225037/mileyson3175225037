@@ -27,4 +27,6 @@ abajo.addEventListener('click', function() {
 
 
 
+
+
 /* aqui va a terminar todo el scrip de el archivo html*/
