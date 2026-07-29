@@ -78,6 +78,28 @@
     color: white;
 }
 
+@media (max-width: 1280px) {
+  .computador{
+    height: auto;
+ }
+
+ .menu-registro-ingreso{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar{
+  width: 500px;
+}
+}
+
+
+
+
+
+
+
+
 
 
 
