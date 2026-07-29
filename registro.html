@@ -3,33 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
-    <link rel="stylesheet" href="mejo-archivo.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1">
 </head>
-<body class="bolso-para-ver">
-   <header class="pony-dulce">
-       <h1 class="valde-basura">ReservaPlanet</h1>
-       <a class="mi-enlace-a-otra-pagina-web" href="index.html"><img class="flecha-para-decorar" src="imagen/flecha.png" alt=""></a>
-   </header>
-    <head>
-     <section class="mesa-silla">
-      <div class="container"></div>
-        <h2 class="centrar-este-titulo">Registro</h2>
-          <form class="moto-negra-flex" action="/registro" method="POST">
-            
-                <label for="nombre">Nombre:</label>
-                <input class="plastico-blanco" type="text" id="nombre" name="nombre" required>
-           
-                <label for="email">Correo electrónico:</label>
-                <input class="plastico-blanco"  type="email" id="email" name="email" required>
-            
-                <label for="contraseña">Contraseña:</label>
-                <input class="plastico-blanco"  type="password" id="contraseña" name="contraseña" required>
-           
-                <button class="boton-registro" type="submit">Registrarse</button>
-            
-         </form>
-    </section> 
-    </head>
+<body class="body-del-registrophp">
+ <section class="card-registro-para-mi-archivo-de-registro">
+    <div class="encavezado-de-mi-ingresar-php">
+      <a href="index.html"  class="btn-back-milo">
+      <i id="identificador-css" class="fa-solid fa-arrow-left"></i>
+      </a>
+      <p class="gorra-para-que-vea">TuSOAT</p>
+    </div>
+ <form  class="formulario-importante-para-crear">
+  <input
+    type="text"
+    name="nombre"
+    placeholder="Nombre completo"
+    required
+  >
+
+  <select name="tipoDocumento" required>
+    <option value="">Tipo de documento</option>
+    <option value="CC">Cédula de ciudadanía</option>
+    <option value="CE">Cédula de extranjería</option>
+    <option value="TI">Tarjeta de identidad</option>
+    <option value="PP">Pasaporte</option>
+    <option value="NIT">NIT</option>
+  </select>
+
+  <input
+    type="text"
+    name="numeroDocumento"
+    placeholder="Número de documento"
+    required
+  >
+
+  <input
+    type="email"
+    name="correo"
+    placeholder="Correo electrónico"
+    required
+  >
+
+  <input
+    type="tel"
+    name="celular"
+    placeholder="Número de celular"
+    required
+  >
+
+  <input
+    type="password"
+    name="password"
+    placeholder="Contraseña"
+    required
+  >
+
+  <input
+    type="password"
+    name="confirmarPassword"
+    placeholder="Confirmar contraseña"
+    required
+  >
+
+  <button type="submit">
+    Crear cuenta
+  </button>
+
+ </form>
+</section>
+
+   <script src="app.js"></script> 
 </body>
 </html>
