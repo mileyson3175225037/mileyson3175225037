@@ -99,9 +99,9 @@
 }
 
 .todoMinavegadorVaAqui{
-  height: 300px;
+  height: auto;
   width: 250px;
-  background-color: rgb(35, 35, 253);
+  background-color: rgb(233, 232, 232);
   position: absolute;
   top: 100%;
   right: 5px;
@@ -110,7 +110,26 @@
   z-index: 1;
   border-radius: 5px;
   display: none;
+  box-shadow: 0 10px 25px rgba(32, 32, 32, 0.4);
+  border: solid 1px black;
 }
+
+.ventiladorConZapatosGrandes{
+   width: 100%;
+   height: 55px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+.vorParaeeuuSoyElmejor{
+  color: black;
+ }
+ .vorParaeeuuSoyElmejor:hover{
+  padding: 5px 5px 5px 5px; 
+  border: solid 1px blue; border-radius: 5px;
+ }
 
 .navegadorOculto:hover .todoMinavegadorVaAqui{
    display: block;
@@ -145,6 +164,7 @@
 /* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño*/
 @media (max-width: 800px) {
  
+
  .navbar{
   display: none;
  }
@@ -200,16 +220,42 @@
 }
 
 .ventiladorDehoroPuro{
- height: 300px;
- width: 250px;
- background-color: yellow;
+ height: auto;
+ width: auto;
+ background-color: rgb(233, 232, 232);
  position: absolute;
  left: 1px;
  top: 100px;
  display: none;
+ display: flex;
  border-radius: 0px 0px 5px 5px;
  box-shadow: 0 10px 25px rgba(32, 32, 32, 0.4);
- 
+ border: solid 1px black;
+ display: none;
+}
+
+.clasPLATAparaMIgente{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.arrozConMaiz{
+  width: 250px;
+  height: 300px;
+   background-color: rgb(233, 232, 232);
+  box-shadow: 0 10px 25px rgba(32, 32, 32, 0.4);
+  margin: 5px 5px 5px 5px;
+}
+
+.otroHelicoptero{
+   width: 100%;
+   height: 55px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .contenedorPrahover:hover .ventiladorDehoroPuro{
@@ -346,7 +392,7 @@
       position: absolute;
       height: 0;
       width: 0;
-      top: 40px;
+      top: 35px;
       right: 50px
      }
 
