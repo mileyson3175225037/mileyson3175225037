@@ -336,7 +336,10 @@
 
      }
      .tenisNegras{
-       height: auto;
+       height: 500px;
+     }
+     .ventiladorDehoroPuro{
+       top: 5px;
      }
  }
 
