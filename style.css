@@ -345,8 +345,8 @@
        height: auto;
      }
      .cieloAzulMejor{
-      width: 0%;
-      height: 0%;
+      position: absolute;
+      height: 0;
      }
  }
 
