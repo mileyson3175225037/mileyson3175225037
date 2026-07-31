@@ -159,7 +159,13 @@
 
  }
 
-
+/* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño como para celular*/
+@media (max-width: 500px) {
+  .computador{
+    background-color: red;
+   width: 100%;
+  }
+ }
 
 
 
@@ -296,6 +302,25 @@
  width: auto;
  flex-wrap: wrap;
 }
+
+.contenedorPARAlahora{
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 5px;
+ }
+}
+ /* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño como para celular*/
+ @media (max-width: 500px) {
+ .tenisNegras{
+  width: 100%;
+  height: auto;
+ }
+ .contenedorPARAlahora{
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 5px;
+   height: 70px;
+ }
  }
 
 
