@@ -331,9 +331,12 @@
 
      #positionDERECHAsuperios{
       position: absolute;
-       top: 0;
-       right: 0;
+       top: 5;
+       right: 5;
 
+     }
+     .tenisNegras{
+       height: auto;
      }
  }
 
@@ -992,11 +995,12 @@ textarea{
 }
 
 .techoMaloSiempre{
-  width: 400px;
+  width: auto;
   height: 100%;
   background-color: red;
   position: relative;
   z-index: 1;
+
 }
 
 .svgMejor{
