@@ -16,6 +16,9 @@
     align-items: center;
     flex-wrap: wrap;
     padding-right: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo{
@@ -162,7 +165,7 @@
 /* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño como para celular*/
 @media (max-width: 500px) {
   .computador{
-    background-color: red;
+   z-index: 10;
    width: 100%;
   }
  }
@@ -322,6 +325,9 @@
    margin-bottom: 5px;
    height: 70px;
  }
+  .ventiladorDehoroPuro{
+       top: 75px;
+     }
  }
 /* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño como para celular*/
  @media (max-width: 498px){
@@ -336,11 +342,9 @@
 
      }
      .tenisNegras{
-       height: 100px;
+       height: auto;
      }
-     .ventiladorDehoroPuro{
-       top: 100px;
-     }
+     
  }
 
 
@@ -999,7 +1003,7 @@ textarea{
 
 .techoMaloSiempre{
   width: auto;
-  height: 100%;
+  height: 700px;
   background-color: red;
   position: relative;
   z-index: 1;
