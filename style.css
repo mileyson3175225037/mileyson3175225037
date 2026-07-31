@@ -344,7 +344,10 @@
      .tenisNegras{
        height: auto;
      }
-     
+     .cieloAzulMejor{
+      width: 0%;
+      height: 0%;
+     }
  }
 
 
