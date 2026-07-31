@@ -185,6 +185,7 @@
   display: flex;
   align-items: center;
   box-shadow: 0 10px 25px rgba(32, 32, 32, 0.4);
+  position: relative;
 }
 
 
@@ -327,6 +328,13 @@
      #paraQUITARLO{
       display: none;
      } 
+
+     .positionDERECHAsuperios{
+      position: absolute;
+       top: 0;
+       right: 0;
+
+     }
  }
 
 
@@ -971,7 +979,7 @@ textarea{
 
 
 
-/* aqui va todo el css del footer osea pies de pagina */
+/* aqui va todo el css del footer osea pies de pagina o footer */
 .footer{
   height: 400px;
   width: 100%;
@@ -1071,3 +1079,11 @@ textarea{
    background-color: rgb(160, 159, 159);
    color: white;
 }
+
+/* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño como para celular*/
+ @media (max-width: 500px){
+  .footer{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+ }
