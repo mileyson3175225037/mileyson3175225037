@@ -318,6 +318,7 @@
  .tenisNegras{
   width: 100%;
   height: auto;
+  position: relative;
  }
  .contenedorPARAlahora{
    margin-left: auto;
@@ -366,7 +367,7 @@ margin-top: 10px;
 margin-bottom: 10px;
 }
 
-body{
+.cementoBlacoTransparente{
 width: 100%;
 height: 600px;
 background-color: rgb(219, 218, 218);
@@ -489,6 +490,24 @@ button:hover {
 }
 
  }
+
+@media (max-width: 498px){
+  .cementoBlacoTransparente{
+     width: 100%;
+     height: auto;
+  }
+
+  .body-elemento{
+    height: auto;
+    width: 100%;
+  }
+
+}
+
+
+
+
+
 
 
 
