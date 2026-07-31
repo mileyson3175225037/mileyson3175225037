@@ -312,6 +312,9 @@
    margin-right: auto;
    margin-bottom: 5px;
  }
+ .ventiladorDehoroPuro{
+   top: 75px;
+ }
 }
  /* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño como para celular*/
  @media (max-width: 500px) {
@@ -339,11 +342,12 @@
        height: auto;
      }
      .cieloAzulMejor{
+      background-color: red;
       position: absolute;
       height: 0;
       width: 0;
-      top: 20px;
-      right: 20px
+      top: 40px;
+      right: 50px
      }
 
      .contenedorPARAlahora{
