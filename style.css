@@ -322,7 +322,12 @@
    height: 70px;
  }
  }
-
+/* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño como para celular*/
+ @media (max-width: 498px){
+     #paraQUITARLO{
+      display: none;
+     } 
+ }
 
 
 
