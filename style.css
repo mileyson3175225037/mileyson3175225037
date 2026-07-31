@@ -340,8 +340,13 @@
      .cieloAzulMejor{
       position: absolute;
       height: 0;
+      width: 0;
       top: 10px;
       right: 10px
+     }
+
+     .contenedorPARAlahora{
+       margin-top: 5px;
      }
  }
 
