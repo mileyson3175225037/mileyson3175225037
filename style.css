@@ -341,12 +341,12 @@
       position: absolute;
       height: 0;
       width: 0;
-      top: 10px;
-      right: 10px
+      top: 20px;
+      right: 20px
      }
 
      .contenedorPARAlahora{
-       margin-top: 5px;
+       margin-top: 10px;
      }
  }
 
