@@ -76,8 +76,6 @@
   border: solid 1px black;
 }
 
-
-
 .navegador-principal,a{
     color: black;
     font-size: 30px;
@@ -198,8 +196,6 @@
 }
 /* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño*/
 @media (max-width: 800px) {
- 
-
  .navbar{
   display: none;
  }
@@ -408,7 +404,6 @@
  /* aqui va toda las media queris para cuando la pantalla este en un tamaño mas pequeño como para celula a 540pxr*/
 @media (max-width: 540px) {
  .clasPLATAparaMIgente{
-    background-color: red;
     flex-wrap: wrap;
     height: auto;
   }
@@ -469,7 +464,7 @@
 
 
 
-
+/* aqui esta todo el cuerpo central de la pagina principa index.html*/
 
 .body-elemento{
 width: 100%;
@@ -625,11 +620,7 @@ button:hover {
 
 
 
-
-
-
-
-/* todo el css de mi archivo descargar.php*/
+/* todo el css de mi archivo  contacto.html y el archivo descarga tienen el mismo css solo en el contenedor principal*/
 
 .contenedor-principal-arcivo-descarga{
   background-color: rgb(68, 68, 68);
@@ -642,9 +633,9 @@ button:hover {
   background-color: white;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-top: 35px;
   border-radius: 5px 5px 5px 5px;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
   padding: 5px 5px 5px 5px;
 }
 
@@ -689,6 +680,7 @@ button:hover {
   background-color: white;
   width: 100%;
   height: 380px;
+  border-radius: 5px;
   box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
 }
 
@@ -703,6 +695,8 @@ button:hover {
     display:flex;
     flex-direction:column;
     gap:18px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .grupo{
@@ -713,7 +707,9 @@ button:hover {
 label{
     margin-bottom:8px;
     font-weight:bold;
-    color:#334155;
+    color:black;
+    font-size: 20px;
+    margin-left: 2px;
 }
 
 input,
@@ -740,18 +736,24 @@ textarea{
 .boton{
     background:#2563eb;
     color:white;
-    border:none;
-    padding:15px;
-    border-radius:12px;
-    font-size:17px;
-    cursor:pointer;
-    transition:0.3s;
-    font-weight:bold;
+    width: 250px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
 }
 
 .boton:hover{
     background:#1d4ed8;
     transform:scale(1.03);
+}
+
+@media (max-width: 498px){
+.color-fondo{
+  width: 100%;
+  margin-left: 1px;
+  margin-right: 1px;
+}
 }
 
 
@@ -831,8 +833,7 @@ textarea{
 
 
 
-
-/* aqui va todo el css de la pagina para ingresar.php*/
+/* aqui va todo el css de la pagina para ingresar.html*/
 
 .body-de-mi-ingresarphp-elMejor{
   width: 100%;
@@ -842,35 +843,26 @@ textarea{
 }
 
 .section-de-mi-ingresarphp{
-  margin: 0;
-  padding: 0;
-  background-color: blue;
+  background-color: rgb(72, 72, 240);
   width: 100%;
   height: auto;
-  position: relative;
   display: flex;
   flex-direction: column;
-}
-
-
-.contenedores-de-mi-ingresarphp{
-  width: 100%;
-  height: 350px;
-  background-color: rgb(245, 245, 37);
-   box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
+  border: solid 1px red;
 }
 
 .div-donde-va-mi-formulario-ingresarphp{
   width: 400px;
   height: 550px;
   background-color: white;
-  position: absolute;
-  left: 35%;
   margin-top: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px rgb(48, 47, 47);
 }
 
 
@@ -918,7 +910,7 @@ textarea{
 .recuperarcontraseña-y-ingresar-con-codigo{
   width: 100%;
   height: 250px;
-  background-color: rgb(46, 46, 233);
+  background-color: rgb(118, 118, 247);
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -937,15 +929,44 @@ textarea{
   margin-top: 40px;
 }
 
+.grandeMEABURROdetodolomalo{
+  width: 100%;
+  height: 80px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 223, 223);
+}
+/* cuando falle sepone el parrafo paraDarlecolorALmensajedeAvertencia y tambien grandeMEABURROdetodolomalo*/
+.paraDarlecolorALmensajedeAvertencia{
+  font-size: 20px;
+  color: red;
+  text-align: center;
+}
+
 .ingresa-mas-rapido-ingresarphp:hover{
     border-radius: 5px;
     background-color: white;
     color: black;
 }
+@media (max-width: 800px){
+  .contenedores-de-mi-ingresarphp{
+    display: none;
+  }
 
+  .body-de-mi-ingresarphp-elMejor{
+    background-color: grey;
+  }
+}
 
-
-
+@media (max-width: 498px){
+  .div-donde-va-mi-formulario-ingresarphp{
+    width: 100%;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+}
 
 
 
@@ -955,18 +976,6 @@ textarea{
 
 /* aqui va todo el css de la pagina para registro.php*/
 
-
-.card-registro-para-mi-archivo-de-registro {
-  width: 400px;
-  height: 550px;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin: 0;
-  padding: 0%;
-}
-
 .body-del-registrophp{
   background-color: rgb(73, 73, 73);
   display: flex;
@@ -974,17 +983,62 @@ textarea{
   align-items: center;
 }
 
+.card-registro-para-mi-archivo-de-registro {
+  width: 400px;
+  height: auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 15px;
+  padding: 5px;
+}
+
 .formulario-importante-para-crear{
   width: 100%;
   height: auto;
-  background-color: blue;
-  padding: 5px;
+  background-color: rgb(223, 221, 221);
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
+.arrozcieloChanclauva{
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 12px rgb(66, 66, 66);
+  border: solid 2px rgb(56, 56, 252);
+  color: rgb(121, 121, 121);
+}
 
+.botonDehoroZapato{
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgb(66, 66, 66);
+}
+
+.lavaderoBañoDesocrateCIRIACO{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parrafoROJO{
+  color: red;
+  font-size: 20px;
+}
+
+@media (max-width: 498px){
+  .card-registro-para-mi-archivo-de-registro{
+    width: 100%;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+}
 
 
 
@@ -994,6 +1048,7 @@ textarea{
    display: flex;
    justify-content: center;
    align-items: center;
+   margin-top: 100px;
 }
 
 .clase-de-mi-registro-exitoso{
@@ -1037,6 +1092,7 @@ textarea{
    justify-content: center;
    align-items: center;
    background-color: rgb(189, 187, 187);
+   margin-top: 100px;
 }
 
 .contenedor-principal-para-poner-el-icono-de-flecha{
@@ -1132,7 +1188,7 @@ textarea{
   margin: 0;
   padding: 0;
   display: flex;
-  display: block;
+  flex-direction: column;
 }
 
 .piesFotterTECLADOnegroOblanco{
@@ -1229,28 +1285,31 @@ textarea{
 
 .comentarioDelosClientes{
   height: auto;
-  width: auto;
-  background-color: blue;
-  right: 50px;
-  top: 20px;
-  z-index: 1;
+  width: 100%;
+  display: flex;
   border-radius: 5px;
-  border:  solid 1px black;
+  flex-direction: column;
+  box-shadow: 2px 2px 2px 2px gray;
 }
 .hijoDecomentarioDelosClientes{
-  height: 400px;
+  height: 300px;
   width: 100%;
-  background-color: white;
+  background-color: rgb(248, 247, 247);
   border-radius: 2px;
+  box-shadow: 2px 2px 2px 2px gray;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .bombilloRojo{
   height: 100px;
+  background-color: rgb(144, 144, 250);
   width: 100%;
-  background-color: rgb(74, 74, 243);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2px;
+  box-shadow: 2px 2px 2px 2px gray;
 }
 .tamañoMASGRANDE{
   font-size: 30px;
@@ -1260,7 +1319,7 @@ textarea{
 .bombilloRojo123{
   height: 70px;
   width: 100%;
-  background-color: rgb(74, 74, 243);
+  background-color: rgb(144, 144, 250);
   display: flex;
   align-items: center;
 }
@@ -1298,4 +1357,15 @@ textarea{
   }
  }
 
+ @media (max-width: 498px){
+  .ropaROJAmojadaOsucia{
+    margin-bottom: 10px;
+  }
+  .tamañoMASGRANDE{
+    text-align: center;
+  }
+  .originalManoDeHobra{
+    margin-top: 10px;
+  }
+ }
  
