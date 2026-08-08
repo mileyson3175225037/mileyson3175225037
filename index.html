@@ -90,30 +90,32 @@
     <form class="formulario-cotiza" id="formulario-soat">
 
         <div class="campo">
-            <label for="placa">Placa</label>
+            <label  for="placa">Placa</label>
             <input 
                 type="text" 
                 id="placa" 
                 placeholder="Ej: ABC123"
-                required
+                
             >
         </div>
 
         <div class="campo">
-            <label for="cedula">Número de cédula</label>
+            <label  for="cedula">Número de cédula</label>
             <input 
                 type="number" 
                 id="cedula" 
                 placeholder="Ingresa tu cédula"
-                required
+                
             >
         </div>
 
         <button type="submit">
             Cotizar ahora
         </button>
-      
     </form>
+        <div class="contenedorParalosErrores">
+             <p class="todosLOSERRORESdelBaquen"></p>
+        </div>
   </div>
 </div>
     
@@ -164,10 +166,8 @@
      </div>
     
 </footer>
-
+<script src="conexion-express.js"></script>
 <script src="app.js"></script>
-
-
 </body>
 </html>
 

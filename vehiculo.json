@@ -1,0 +1,22 @@
+[
+    {
+        "placa": "TWG61C",
+        "cedula": "1111808238",
+        "propietario": "Juan Perez",
+        "tipo": "Automovil",
+        "marca": "Toyota",
+        "modelo": 2022,
+        "cilindraje": 1600,
+        "precioSoat": 897000
+    },
+    {
+        "placa": "XYZ789",
+        "cedula": "987654321",
+        "propietario": "Maria Gomez",
+        "tipo": "Moto",
+        "marca": "Yamaha",
+        "modelo": 2021,
+        "cilindraje": 150,
+        "precioSoat": 350000
+    }
+]

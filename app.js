@@ -1,3 +1,6 @@
+{
+  // aqui va todo el js script de los digitos para ingresar y validar pormedio de correo o numero telefonico  
+
 const digitos = document.querySelectorAll('.digito');
 
 digitos.forEach((input, index) => {
@@ -18,3 +21,10 @@ digitos.forEach((input, index) => {
         }
     });
 });
+
+// aqui termina mi codigo para validar ingreso por medio de telefono 
+}
+
+
+
+
