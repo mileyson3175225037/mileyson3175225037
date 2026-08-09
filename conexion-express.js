@@ -79,7 +79,7 @@ formulario.addEventListener("submit", async (e) => {
         sessionStorage.setItem("cotizacion", JSON.stringify(respuestavehiculo));
 
        // Ir a la siguiente página
-         window.location.href = "/repuestacontizacion.html";
+         window.location.href = "./repuestacontizacion.html";
 
     } catch (error) {
 

@@ -536,8 +536,7 @@ padding: 0;
 
 
 .formulario-cotiza {
-    width: 100%;
-    max-width: 400px;
+    width: 350px;
     margin: 50px auto;
     padding: 25px;
     background: #ffffff;
@@ -625,6 +624,9 @@ button:hover {
     width: 100%;
   }
 
+  .campo label{
+    font-size: 15px;
+  }
 }
 
 
@@ -1299,6 +1301,7 @@ textarea{
   flex-direction: column;
   margin-top: 5px;
   margin-bottom: 5px;
+  background-color: red;
 }
 
 .ropaROJAmojadaOsucia{
@@ -1401,6 +1404,7 @@ textarea{
 .tamañoMASGRANDE{
   font-size: 30px;
   color: white;
+  text-align: center;
 }
 
 .bombilloRojo123{
@@ -1453,6 +1457,14 @@ textarea{
   }
   .originalManoDeHobra{
     margin-top: 10px;
+    width: auto;
+  }
+  .ropaROJAmojadaOsucia{
+    height: auto;
+    margin-top: 2;
+  }
+  .centrePORFAVORqueQuieroVERelcambio{
+    font-size: 20px;
   }
  }
  
