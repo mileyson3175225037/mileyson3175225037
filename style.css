@@ -590,12 +590,15 @@ padding: 0;
 }
 
 .contenedorParalosErrores{
-  width: 450px;
+  width: 80%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .todosLOSERRORESdelBaquen{
@@ -1293,7 +1296,7 @@ textarea{
 .footer{
   height: auto;
   width: 100%;
-  background-color: #3e4c5f;;
+  background-color: #3e4c5f;
   margin: 0;
   padding: 0;
   display: flex;
@@ -1321,7 +1324,6 @@ textarea{
   flex-direction: column;
   margin-top: 5px;
   margin-bottom: 5px;
-  background-color: red;
 }
 
 .ropaROJAmojadaOsucia{
@@ -1416,7 +1418,7 @@ textarea{
 .bombilloRojo{
   height: 100px;
   width: 100%;
-  background-color: rgb(144, 144, 250);
+  background-color: #6c82a0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1434,7 +1436,7 @@ textarea{
 .bombilloRojo123{
   height: 70px;
   width: 100%;
-  background-color: rgb(144, 144, 250);
+  background-color: #6c82a0;
   display: flex;
   align-items: center;
   margin-left: 1px;
@@ -1471,6 +1473,12 @@ textarea{
   .footer{
     width: 100%;
     flex-wrap: wrap;
+  }
+  .imagenParaCentrarlo{
+    width: auto;
+  }
+  .originalManoDeHobra{
+    width: auto;
   }
  }
 
