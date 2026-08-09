@@ -527,6 +527,13 @@ padding: 0;
    margin-right: auto;
 }
 
+/* este clase lo llamare desde js script para que no se confunda*/
+.borde-rojoPARALOSinpusindexhtml {
+  border: 2px solid red;
+}
+/* aqui termina la clase que voy a llamar desde js script */
+
+
 .nosoyELTROquetudisesporfavor{
  width: 80%;
  height: auto;
@@ -596,7 +603,6 @@ padding: 0;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: red;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1052,6 +1058,43 @@ textarea{
   border: solid 2px rgb(56, 56, 252);
   color: rgb(121, 121, 121);
 }
+
+.containerojoPARAbrirycerrarelojo{
+  height: 50px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#togglePassword{
+  position: absolute;
+}
+
+#cambialoPuesparaentenderlo{
+  height: 50px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 12px rgb(66, 66, 66);
+  border: solid 2px rgb(56, 56, 252);
+  color: rgb(121, 121, 121);
+}
+
+#togglePasswordAhorasi{
+  font-size: 25px;
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}
+
+#togglePasswordAhorano{
+  font-size: 25px;
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}
+
 
 .botonDehoroZapato{
   width: 250px;

@@ -7,6 +7,7 @@ const inputPlaca = document.getElementById("placa");
 const inputCedula = document.getElementById("cedula");
 const resultado = document.querySelector(".todosLOSERRORESdelBaquen");
 
+
 // Solo letras y números para la placa
 inputPlaca.addEventListener("input", (e) => {
 

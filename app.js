@@ -22,9 +22,65 @@ digitos.forEach((input, index) => {
     });
 });
 
-// aqui termina mi codigo para validar ingreso por medio de telefono 
 }
+// aqui termina mi codigo para validar ingreso por medio de telefono 
 
 
 
 
+
+
+
+
+
+
+
+//aqui va todo ojo serrado y avierto de mi input registro.html
+{
+
+
+let ventiladorPRENDIDO = document.querySelector(".nadaqueverConUsted");
+let pabloEscovar = document.querySelector("#togglePasswordAhorasi");
+let noseaasitamMalosocio = document.querySelector(".loquieroaHORAparacambiar");
+let pabloEscovaracecino = document.querySelector("#togglePasswordAhorano");
+
+pabloEscovar.addEventListener("click", () => {
+
+  if (ventiladorPRENDIDO.type === "text") {
+
+    ventiladorPRENDIDO.type = "password";
+    pabloEscovar.classList.add("fa-eye-slash");
+    pabloEscovar.classList.remove("fa-eye");
+
+  } else {
+
+    ventiladorPRENDIDO.type = "text";
+    pabloEscovar.classList.add("fa-eye");
+    pabloEscovar.classList.remove("fa-eye-slash");
+    fa-eye-slash
+  }
+
+});
+
+
+
+pabloEscovaracecino.addEventListener("click", () => {
+
+  if (noseaasitamMalosocio.type === "text") {
+
+    noseaasitamMalosocio.type = "password";
+    pabloEscovaracecino.classList.add("fa-eye-slash");
+    pabloEscovaracecino.classList.remove("fa-eye");
+
+  } else {
+    noseaasitamMalosocio.type = "text";
+    pabloEscovaracecino.classList.add("fa-eye");
+    pabloEscovaracecino.classList.remove("fa-eye-slash");
+    fa-eye-slash
+}
+});
+
+
+
+}
+//aqui termina todo sobre el ojo cerrado y avierto de mi input registro.html
