@@ -1,6 +1,6 @@
- {
-   //este corchete evita que se propague js scrip a otras pagina y aqui abre
+ {//este corchete evita que se propague js scrip a otras pagina y aqui abre
    //aqui va el js script de index.html pero solo las peticiones a express
+   
 
 const formulario = document.getElementById("formulario-soat");
 const inputPlaca = document.getElementById("placa");
@@ -94,5 +94,5 @@ formulario.addEventListener("submit", async (e) => {
 });
 
 
-//este corchete evita que se propague js scrip a otras pagina y aqui sierra
-}
+
+}//este corchete evita que se propague js scrip a otras pagina y aqui cierra

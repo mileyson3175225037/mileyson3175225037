@@ -1053,6 +1053,7 @@ textarea{
 .arrozcieloChanclauva{
   height: 50px;
   margin-top: 5px;
+  width: 100%;
   margin-bottom: 5px;
   box-shadow: 0 4px 12px rgb(66, 66, 66);
   border: solid 2px rgb(56, 56, 252);
@@ -1080,6 +1081,45 @@ textarea{
   border: solid 2px rgb(56, 56, 252);
   color: rgb(121, 121, 121);
 }
+
+#cambialoPuesparaentenderlo123{
+  height: 50px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 12px rgb(66, 66, 66);
+  border: solid 2px rgb(56, 56, 252);
+  color: rgb(121, 121, 121);
+}
+
+.plataAgena{
+  font-size: 25px;
+  position: absolute;
+  right: 5px;
+  color: green;
+  z-index: -2;
+}
+
+.DineromioClaro{
+  font-size: 25px;
+  position: absolute;
+  right: 5px;
+  color: red;
+  z-index: -2;
+}
+
+/* aqui va todo lo que le tenemos que agregar a nuestro input cuando este correcto y lo llamre desde js scrip quitar y agregar */
+
+.agregar{
+  display: block;
+  z-index: 2;
+}
+
+.celulargrande{
+  border: solid 4px red;
+}
+
+/* aqui termina todo lo que le tenemos que agregar a nuestro input cuando este correcto y lo llamre desde js scrip quitar y agregar */
 
 #togglePasswordAhorasi{
   font-size: 25px;
