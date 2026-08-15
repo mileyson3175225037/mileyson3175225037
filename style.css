@@ -1111,7 +1111,7 @@ textarea{
 /* aqui va todo lo que le tenemos que agregar a nuestro input cuando este correcto y lo llamre desde js scrip quitar y agregar */
 
 .agregar{
-  display: block;
+ 
   z-index: 2;
 }
 
@@ -1153,6 +1153,7 @@ textarea{
 .parrafoROJO{
   color: red;
   font-size: 20px;
+  text-align: center;
 }
 
 @media (max-width: 498px){
