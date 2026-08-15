@@ -37,8 +37,8 @@ formulario.addEventListener("submit", async (e) => {
         resultado.textContent= ("Todos los campos son obligatorios.")
         setTimeout(() => {
         resultado.textContent = "";
-    }, 5000);
-    return; // para detenelo asta que secumpla todo esatamente
+        }, 5000);
+        return; // para detenelo asta que secumpla todo esatamente
     }
 
     try {
@@ -47,9 +47,7 @@ formulario.addEventListener("submit", async (e) => {
 
     const respuesta = await fetch("vehiculo.json");
 
-
     const vehiculos = await respuesta.json();
-
 
     const  respuestavehiculo = vehiculos.find((vehiculo) =>
         vehiculo.placa === placa &&

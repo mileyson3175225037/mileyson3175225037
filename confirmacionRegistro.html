@@ -10,9 +10,18 @@
 <body class="body-donde-va-la-confimacionPHP">
     <div class="clase-de-mi-registro-exitoso">
       <span class="confirmacion-de-regristro-correcto">✓</span>
-      <p class="parrafo-dideño-div-confirmacion">¡Registro exitoso!</p>
+      <p class="parrafo-dideño-div-confirmacion"></p>
     </div>
      
-   <script src="app.js"></script> 
+   <script src="app.js"></script>
+   <script>
+    const elementodeCorfimacionderegistro = document.querySelector(".parrafo-dideño-div-confirmacion")
+     elementodeCorfimacionderegistro.textContent = localStorage.getItem("mensajeConfirmacion") || "";
+
+     setTimeout(() => {
+     localStorage.removeItem("mensajeConfirmacion");
+     window.location.href = "./index.html";
+     }, 5000);
+</script> 
 </body>
 </html>

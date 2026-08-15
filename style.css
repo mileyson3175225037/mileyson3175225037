@@ -1072,25 +1072,6 @@ textarea{
   position: absolute;
 }
 
-#cambialoPuesparaentenderlo{
-  height: 50px;
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  box-shadow: 0 4px 12px rgb(66, 66, 66);
-  border: solid 2px rgb(56, 56, 252);
-  color: rgb(121, 121, 121);
-}
-
-#cambialoPuesparaentenderlo123{
-  height: 50px;
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  box-shadow: 0 4px 12px rgb(66, 66, 66);
-  border: solid 2px rgb(56, 56, 252);
-  color: rgb(121, 121, 121);
-}
 
 .plataAgena{
   font-size: 25px;

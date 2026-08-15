@@ -7,9 +7,9 @@
      const  ajo = document.getElementById("verduraFritaParacomer");
      const cieloTENIS = document.getElementById("quienseraELLA");
      const chocola = document.getElementById("yosequienEsella");
-     const maiz = document.querySelector(".nadaqueverConUsted");
-     const trigo = document.querySelector(".loquieroaHORAparacambiar");
      const mateo = document.querySelector(".parrafoROJO")
+     
+     
 
      // estos son todos los iconos de el input nombre
      const ladrilloTomacorriente = document.querySelector("#nocheBuena");
@@ -75,16 +75,18 @@
        cristovalColon.classList.toggle("agregar", todollegaMINUSCULA)
        chocola.classList.toggle("celulargrande", !todollegaMINUSCULA)
      })
+      
 
 
-    ventiladorMalo.addEventListener("submit", async (e) =>{
-      e.preventDefault();
+     //aqui va todo el event listene submit cara que no se envia asta que se le ordene
+      ventiladorMalo.addEventListener("submit", async (e) =>{
+       e.preventDefault();
        //aquiva la validacion del input nombre completo perodentro del submit
        const valido = cascooscuro.value.trim().toLowerCase()
        const expresion = /^[\p{L}\p{N}\s'-]+$/u;
        const maletero = valido.length >= 3 && expresion.test(valido);
        if (!maletero){
-       mateo.textContent ="Ingresa al menos 3 caracteres. No se permiten caracteres especiales como #, % o @";
+       mateo.textContent ="Ingresa al menos 3 caracteres. No se permiten  como #, % o @";
        cascooscuro.focus()
        setTimeout(() =>{
         mateo.textContent = "";
@@ -98,8 +100,8 @@
        const comparacion = /^\d{6,20}$/;
        const maleteroROJO = comparacion.test(celularmalucoViejo);
        if (!maleteroROJO){
-       mateo.textContent ="Debe haber al menos 6 números para el documento ";
-       cascooscuro.focus()
+       mateo.textContent =" Debe haber al menos 6 números para el documento  ";
+       ajo.focus()
        setTimeout(() =>{
         mateo.textContent = "";
         }, 5000);
@@ -115,7 +117,21 @@
        const padrePoderozoaquiesta = comparaloTEDAbien.test(tepegoUnpuño);
        if (!padrePoderozoaquiesta){
        mateo.textContent ="Ingresa un correo electrónico válido, por ejemplo: usuario@correo.com";
-       cascooscuro.focus()
+       cieloTENIS.focus()
+       setTimeout(() =>{
+        mateo.textContent = "";
+        }, 5000);
+       return;
+      };
+
+      
+      //aquiva la validacion del input numero telefonico  completa perodentro del submit
+       const ellamedijoAyer = chocola.value.trim()
+       const mecompreUncelularnuevomalo = /^3\d{9}$/;
+       const maleteroROJOrayoscomoasi =  mecompreUncelularnuevomalo.test(ellamedijoAyer);
+       if (!maleteroROJOrayoscomoasi){
+       mateo.textContent ="El número de celular debe tener 10 dígitos y comenzar con 3. Ejemplo: 3001234567";
+       chocola.focus()
        setTimeout(() =>{
         mateo.textContent = "";
         }, 5000);
@@ -123,7 +139,24 @@
       };
 
 
+      const contraseñadeotro = ventiladorPRENDIDO.value;
+    
+        if(contraseñadeotro.length < 4 || contraseñadeotro.length >8 ){
+        mateo.textContent = "La contraseña debe tener como minimo 4 carateres a 8 maximo";
+        ventiladorPRENDIDO.focus()
+        setTimeout(() =>{
+         mateo.textContent ="";
+        }, 5000);
+        return;
+       }
 
+
+       console.log("Todos los campos son correctos");
+       ventiladorMalo.reset();
+       localStorage.setItem("mensajeConfirmacion", "¡Registro exitoso!");
+       window.location.href = "./confirmacionRegistro.html";
+       
+       
    })
   
 //

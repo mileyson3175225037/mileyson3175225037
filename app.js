@@ -1,4 +1,4 @@
-{
+
   // aqui va todo el js script de los digitos para ingresar y validar pormedio de correo o numero telefonico  
 
 const digitos = document.querySelectorAll('.digito');
@@ -22,7 +22,7 @@ digitos.forEach((input, index) => {
     });
 });
 
-}
+
 // aqui termina mi codigo para validar ingreso por medio de telefono 
 
 
@@ -36,28 +36,41 @@ digitos.forEach((input, index) => {
 
 
 //aqui va todo ojo serrado y avierto de mi input registro.html
-{
 
 
-let ventiladorPRENDIDO = document.querySelector(".nadaqueverConUsted");
+
+let ventiladorPRENDIDO = document.querySelector("#nadaqueverConUsted");
 let pabloEscovar = document.querySelector("#togglePasswordAhorasi");
-let noseaasitamMalosocio = document.querySelector(".loquieroaHORAparacambiar");
+let noseaasitamMalosocio = document.querySelector("#loquieroaHORAparacambiar");
 let pabloEscovaracecino = document.querySelector("#togglePasswordAhorano");
+
+//aqui validamos el input para cambiar o ir mosificando los que el cliente valla escribiendo
+ventiladorPRENDIDO.addEventListener("input", () => {
+    const contraseñadeotro = ventiladorPRENDIDO.value;
+    
+    if(contraseñadeotro.length <4 || contraseñadeotro.length >8){
+     ventiladorPRENDIDO.classList.add("celulargrande");
+    }else{
+      ventiladorPRENDIDO.classList.remove("celulargrande");
+    }
+    
+});
+
+
+//aqui validamos el input para cambiar o ir mosificando los que el cliente valla escribiendo
 
 pabloEscovar.addEventListener("click", () => {
 
-  if (ventiladorPRENDIDO.type === "text") {
+  if (ventiladorPRENDIDO.type === "text"){
 
     ventiladorPRENDIDO.type = "password";
     pabloEscovar.classList.add("fa-eye-slash");
     pabloEscovar.classList.remove("fa-eye");
 
   } else {
-
     ventiladorPRENDIDO.type = "text";
     pabloEscovar.classList.add("fa-eye");
     pabloEscovar.classList.remove("fa-eye-slash");
-    fa-eye-slash
   }
 
 });
@@ -76,11 +89,10 @@ pabloEscovaracecino.addEventListener("click", () => {
     noseaasitamMalosocio.type = "text";
     pabloEscovaracecino.classList.add("fa-eye");
     pabloEscovaracecino.classList.remove("fa-eye-slash");
-    fa-eye-slash
 }
 });
 
 
 
-}
+
 //aqui termina todo sobre el ojo cerrado y avierto de mi input registro.html
