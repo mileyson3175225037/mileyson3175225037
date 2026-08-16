@@ -45,7 +45,7 @@ let noseaasitamMalosocio = document.querySelector("#loquieroaHORAparacambiar");
 let pabloEscovaracecino = document.querySelector("#togglePasswordAhorano");
 
 //aqui validamos el input para cambiar o ir mosificando los que el cliente valla escribiendo
-ventiladorPRENDIDO.addEventListener("input", () => {
+  ventiladorPRENDIDO.addEventListener("input", () => {
     const contraseñadeotro = ventiladorPRENDIDO.value;
     
     if(contraseñadeotro.length <4 || contraseñadeotro.length >8){
@@ -53,8 +53,10 @@ ventiladorPRENDIDO.addEventListener("input", () => {
     }else{
       ventiladorPRENDIDO.classList.remove("celulargrande");
     }
-    
-});
+  });
+ 
+
+
 
 
 //aqui validamos el input para cambiar o ir mosificando los que el cliente valla escribiendo

@@ -151,12 +151,60 @@
        }
 
 
-       console.log("Todos los campos son correctos");
-       ventiladorMalo.reset();
-       localStorage.setItem("mensajeConfirmacion", "¡Registro exitoso!");
-       window.location.href = "./confirmacionRegistro.html";
-       
-       
+       if(noseaasitamMalosocio.value !== ventiladorPRENDIDO.value){
+         mateo.textContent = "Las contraseñas no coinciden";
+         noseaasitamMalosocio.focus()
+         setTimeout(() =>{
+         mateo.textContent ="";
+        }, 5000);
+        return;
+       }
+
+
+       //console.log("Todos los campos son correctos");
+       //ventiladorMalo.reset();
+       //localStorage.setItem("mensajeConfirmacion", "¡Registro exitoso!");
+       //window.location.href = "./confirmacionRegistro.html";
+        
+       try {
+         const datosRegistro = {
+          nombre: cascooscuro.value.trim(),
+          documento: ajo.value.trim(),
+          correo: cieloTENIS.value.trim().toLowerCase(),
+          celular: chocola.value.trim(),
+          contraseña: ventiladorPRENDIDO.value
+        };
+
+       const respuesta = await fetch("http://localhost:3000/api/items", {
+        method: "POST",
+         headers: {
+         "Content-Type": "application/json"
+         },
+         body: JSON.stringify(datosRegistro)
+        });
+
+        if (!respuesta.ok) {
+         throw new Error("No se pudo completar el registro");
+        }
+
+       const resultado = await respuesta.json();
+
+        console.log("Respuesta del servidor:", resultado);
+
+        ventiladorMalo.reset();
+
+        localStorage.setItem("mensajeConfirmacion", "¡Registro exitoso!");
+        window.location.href = "./confirmacionRegistro.html";
+
+       } catch (error) {
+       console.error("Error al registrar:", error);
+
+       mateo.textContent = "Ocurrió un error al enviar tus datos. Inténtalo nuevamente.";
+
+       setTimeout(() => {
+       mateo.textContent = "";
+       }, 5000);
+      }
    })
   
 //

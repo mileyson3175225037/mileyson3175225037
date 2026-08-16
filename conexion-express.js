@@ -1,4 +1,4 @@
- {//este corchete evita que se propague js scrip a otras pagina y aqui abre
+ //este corchete evita que se propague js scrip a otras pagina y aqui abre
    //aqui va el js script de index.html pero solo las peticiones a express
    
 
@@ -93,4 +93,4 @@ formulario.addEventListener("submit", async (e) => {
 
 
 
-}//este corchete evita que se propague js scrip a otras pagina y aqui cierra
+//este corchete evita que se propague js scrip a otras pagina y aqui cierra
