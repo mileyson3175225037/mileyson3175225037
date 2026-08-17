@@ -139,9 +139,9 @@
       };
 
 
-      const contraseñadeotro = ventiladorPRENDIDO.value;
+      const contraseñadeotroesmilon = ventiladorPRENDIDO.value;
     
-        if(contraseñadeotro.length < 4 || contraseñadeotro.length >8 ){
+        if(contraseñadeotroesmilon.length < 4 || contraseñadeotroesmilon.length >8 ){
         mateo.textContent = "La contraseña debe tener como minimo 4 carateres a 8 maximo";
         ventiladorPRENDIDO.focus()
         setTimeout(() =>{
