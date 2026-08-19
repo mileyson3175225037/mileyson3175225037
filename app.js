@@ -4,32 +4,23 @@ const filo = document.getElementById("idparaagregarIMAGENusuario");
 if (filo) {
 
     filo.addEventListener("click", () => {
-
         // Crear input file
         const input = document.createElement("input");
-
-        input.type = "file";
-        input.accept = "image/*";
-
+         input.type = "file";
+         input.accept = "image/*";
         // Cuando el usuario seleccione una imagen
         input.addEventListener("change", async () => {
-
             const archivo = input.files[0];
-
             if (!archivo) {
                 return;
             }
-
             console.log("Imagen seleccionada:", archivo);
-
             // Datos de Cloudinary
             const cloudName = "TU_CLOUD_NAME";
             const uploadPreset = "TU_UPLOAD_PRESET";
-
             // URL de subida
             const url =
                 `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
-
             // Crear FormData
             const formData = new FormData();
 
@@ -79,76 +70,6 @@ if (filo) {
 
 
 
-
-
-//aqui va todo ojo serrado y avierto de mi input registro.html
-
-const pabloEscovar = document.querySelector("#togglePasswordAhorasi");
-const noseaasitamMalosocio = document.querySelector("#loquieroaHORAparacambiar");
-const pabloEscovaracecino = document.querySelector("#togglePasswordAhorano");
-const ventiladorPRENDIDO = document.querySelector("#nadaqueverConUsted");
-
-//aqui validamos el input para cambiar o ir modificando los que el cliente valla escribiendo
-
-  ventiladorPRENDIDO.addEventListener("input", () => {
-    const contraseñadeotro = ventiladorPRENDIDO.value;
-    if(contraseñadeotro.length <4 || contraseñadeotro.length >8){
-     ventiladorPRENDIDO.classList.add("celulargrande");
-    }else{
-      ventiladorPRENDIDO.classList.remove("celulargrande");
-    }
-  });
- 
-
-
-
-
-//aqui validamos el input para cambiar o ir mosificando los que el cliente valla escribiendo
-
-pabloEscovar.addEventListener("click", () => {
-
-  if (ventiladorPRENDIDO.type === "text"){
-
-    ventiladorPRENDIDO.type = "password";
-    pabloEscovar.classList.add("fa-eye-slash");
-    pabloEscovar.classList.remove("fa-eye");
-
-  } else {
-    ventiladorPRENDIDO.type = "text";
-    pabloEscovar.classList.add("fa-eye");
-    pabloEscovar.classList.remove("fa-eye-slash");
-  }
-
-});
-
-
-
-pabloEscovaracecino.addEventListener("click", () => {
-
-  if (noseaasitamMalosocio.type === "text") {
-
-    noseaasitamMalosocio.type = "password";
-    pabloEscovaracecino.classList.add("fa-eye-slash");
-    pabloEscovaracecino.classList.remove("fa-eye");
-
-  } else {
-    noseaasitamMalosocio.type = "text";
-    pabloEscovaracecino.classList.add("fa-eye");
-    pabloEscovaracecino.classList.remove("fa-eye-slash");
-}
-});
-
-//aqui termina todo sobre el ojo cerrado y avierto de mi input registro.html
-
-
-
-
-
-
-
-
-
-
  // aqui va todo el js script de los digitos para ingresar y validar pormedio de correo o numero telefonico  
 
 const digitos = document.querySelectorAll('.digito');
@@ -174,3 +95,94 @@ digitos.forEach((input, index) => {
 
 
 // aqui termina mi codigo para validar ingreso por medio de telefono 
+
+
+
+
+
+// aqui va todo la configuracion del reloj colombia
+
+const ZONA_HORARIA = "America/Bogota";
+
+function obtenerHoraBogota() {
+    const ahora = new Date();
+
+    // Obtener hora, minuto y segundo de Bogotá
+    const partesHora = new Intl.DateTimeFormat("en-US", {
+        timeZone: ZONA_HORARIA,
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+    }).formatToParts(ahora);
+
+    const hora = {};
+    
+    partesHora.forEach(parte => {
+        if (parte.type !== "literal") {
+            hora[parte.type] = parte.value;
+        }
+    });
+
+    // Obtener fecha de Bogotá
+    const partesFecha = new Intl.DateTimeFormat("en-US", {
+        timeZone: ZONA_HORARIA,
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric"
+    }).formatToParts(ahora);
+
+    const fecha = {};
+
+    partesFecha.forEach(parte => {
+        if (parte.type !== "literal") {
+            fecha[parte.type] = parte.value;
+        }
+    });
+
+    return {
+        hora: hora.hour,
+        minuto: hora.minute,
+        segundo: hora.second,
+        amPM: hora.dayPeriod,
+
+        dia: fecha.day,
+        mes: fecha.month,
+        anio: fecha.year,
+
+        milisegundo: ahora.getMilliseconds()
+    };
+}
+
+
+function actualizarReloj() {
+
+    const tiempo = obtenerHoraBogota();
+
+    // Hora
+    document.getElementById("hora").textContent = tiempo.hora;
+    document.getElementById("minuto").textContent = tiempo.minuto;
+    document.getElementById("segundo").textContent = tiempo.segundo;
+
+    // Milisegundos
+    document.getElementById("mili").textContent =
+        String(tiempo.milisegundo).padStart(3, "0");
+
+    // AM / PM
+    document.getElementById("amPM").textContent = tiempo.amPM;
+
+    // Fecha
+    document.getElementById("dia").textContent = tiempo.dia;
+    document.getElementById("mes").textContent = tiempo.mes;
+    document.getElementById("anio").textContent = tiempo.anio;
+
+    // Volver a actualizar en el siguiente frame
+    requestAnimationFrame(actualizarReloj);
+}
+
+
+// Iniciar reloj
+actualizarReloj();
+
+
+// aqui termina todo la configuracion del reloj colombia

@@ -1,4 +1,68 @@
-// aqui va toda la peticion que enviaremos a expres y lo almacene en mongodb este es el archivo registro.html
+ //aqui va todo ojo serrado y avierto de mi input registro.html
+
+const pabloEscovar = document.querySelector("#togglePasswordAhorasi");
+const noseaasitamMalosocio = document.querySelector("#loquieroaHORAparacambiar");
+const pabloEscovaracecino = document.querySelector("#togglePasswordAhorano");
+const ventiladorPRENDIDO = document.querySelector("#nadaqueverConUsted");
+
+//aqui validamos el input para cambiar o ir modificando los que el cliente valla escribiendo
+
+  ventiladorPRENDIDO.addEventListener("input", () => {
+    const contraseñadeotro = ventiladorPRENDIDO.value;
+    if(contraseñadeotro.length <4 || contraseñadeotro.length >8){
+     ventiladorPRENDIDO.classList.add("celulargrande");
+    }else{
+      ventiladorPRENDIDO.classList.remove("celulargrande");
+    }
+  });
+ 
+//aqui validamos el input para cambiar o ir mosificando los que el cliente valla escribiendo
+
+pabloEscovar.addEventListener("click", () => {
+
+  if (ventiladorPRENDIDO.type === "text"){
+
+    ventiladorPRENDIDO.type = "password";
+    pabloEscovar.classList.add("fa-eye-slash");
+    pabloEscovar.classList.remove("fa-eye");
+
+  } else {
+    ventiladorPRENDIDO.type = "text";
+    pabloEscovar.classList.add("fa-eye");
+    pabloEscovar.classList.remove("fa-eye-slash");
+  }
+
+});
+
+
+
+pabloEscovaracecino.addEventListener("click", () => {
+
+  if (noseaasitamMalosocio.type === "text") {
+
+    noseaasitamMalosocio.type = "password";
+    pabloEscovaracecino.classList.add("fa-eye-slash");
+    pabloEscovaracecino.classList.remove("fa-eye");
+
+  } else {
+    noseaasitamMalosocio.type = "text";
+    pabloEscovaracecino.classList.add("fa-eye");
+    pabloEscovaracecino.classList.remove("fa-eye-slash");
+}
+});
+
+//aqui termina todo sobre el ojo cerrado y avierto de mi input registro.html
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ // aqui va toda la peticion que enviaremos a expres y lo almacene en mongodb este es el archivo registro.html
 
    const ventiladorMalo = document.querySelector("#impresoraDetexto") 
   
