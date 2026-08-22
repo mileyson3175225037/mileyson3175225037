@@ -830,6 +830,9 @@ textarea{
   margin-left: 1px;
   margin-right: 1px;
 }
+.boton{
+  margin-top: 15px;
+}
 }
 
 
@@ -964,6 +967,7 @@ textarea{
 .parafo-para-ingresar-en-los-input{
   margin-top: 5px;
   font-size: 20px;
+  text-align: center;
 }
 
 .input-y-stilo-ingresarphp{

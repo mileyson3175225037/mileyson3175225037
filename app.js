@@ -94,7 +94,16 @@ digitos.forEach((input, index) => {
 });
 
 
-// aqui termina mi codigo para validar ingreso por medio de telefono 
+// aqui termina mi codigo para validar ingreso por medio de telefono
+
+
+
+
+
+
+
+
+
 
 
 
@@ -180,9 +189,99 @@ function actualizarReloj() {
     requestAnimationFrame(actualizarReloj);
 }
 
-
 // Iniciar reloj
 actualizarReloj();
-
-
 // aqui termina todo la configuracion del reloj colombia
+
+
+
+
+
+
+
+
+
+
+//aqui va todo el codigo del scanner
+
+
+const btnScanner123 = document.getElementById("btnScannerHARASI");
+const scannerContainer = document.getElementById("scannerContainer");
+const videoScanner = document.getElementById("videoScanner");
+
+let controls = null;
+
+btnScanner123.addEventListener("click", async () => {
+
+    console.log("📷 Iniciando escáner PDF417...");
+
+    scannerContainer.style.display = "block";
+
+    try {
+
+        // Le decimos a ZXing:
+        // 1. Solo queremos PDF417
+        // 2. Que intente con mayor esfuerzo
+        const hints = new Map();
+
+        hints.set(
+            ZXingLibrary.DecodeHintType.POSSIBLE_FORMATS,
+            [ZXingLibrary.BarcodeFormat.PDF_417]
+        );
+
+        hints.set(
+            ZXingLibrary.DecodeHintType.TRY_HARDER,
+            true
+        );
+
+        const codeReader =
+            new ZXingBrowser.BrowserMultiFormatReader(hints);
+
+        console.log("🔎 Buscando PDF417...");
+
+        // Usar directamente la cámara trasera
+        controls = await codeReader.decodeFromVideoDevice(
+            undefined,
+            videoScanner,
+            (result, error) => {
+
+                if (result) {
+
+                    console.log("================================");
+                    console.log("🎉 ¡PDF417 DETECTADO!");
+                    console.log("================================");
+
+                    console.log("Formato:");
+                    console.log(result.getBarcodeFormat());
+
+                    console.log("Texto:");
+                    console.log(result.getText());
+
+                    console.log("Objeto completo:");
+                    console.log(result);
+
+                    console.log("================================");
+
+                    // Detener scanner
+                    if (controls) {
+                        controls.stop();
+                        controls = null;
+                    }
+
+                    scannerContainer.style.display = "none";
+                }
+
+            }
+        );
+
+    } catch (error) {
+
+        console.error("❌ ERROR DEL ESCÁNER");
+        console.error(error);
+
+    }
+
+});
+
+
+//aqui termina todo el codigo del scaner 
