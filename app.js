@@ -4,34 +4,31 @@ const filo = document.getElementById("idparaagregarIMAGENusuario");
 if (filo) {
 
     filo.addEventListener("click", () => {
-        // Crear input file
+
         const input = document.createElement("input");
-         input.type = "file";
-         input.accept = "image/*";
-        // Cuando el usuario seleccione una imagen
+
+        input.type = "file";
+        input.accept = "image/*";
+
         input.addEventListener("change", async () => {
+
             const archivo = input.files[0];
+
             if (!archivo) {
                 return;
             }
+
             console.log("Imagen seleccionada:", archivo);
-            // Datos de Cloudinary
-            const cloudName = "TU_CLOUD_NAME";
-            const uploadPreset = "TU_UPLOAD_PRESET";
-            // URL de subida
-            const url =
-                `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
-            // Crear FormData
+
             const formData = new FormData();
 
-            formData.append("file", archivo);
-            formData.append("upload_preset", uploadPreset);
+            formData.append("imagen", archivo);
 
             try {
 
-                console.log("Subiendo imagen...");
+                console.log("Enviando imagen a Express...");
 
-                const respuesta = await fetch(url, {
+                const respuesta = await fetch("http://localhost:3000/api/imagen", {
                     method: "POST",
                     body: formData
                 });
@@ -39,22 +36,21 @@ if (filo) {
                 const datos = await respuesta.json();
 
                 if (!respuesta.ok) {
-                    console.error("Error de Cloudinary:", datos);
+                    console.error("Error:", datos);
                     return;
                 }
 
                 console.log("Imagen subida correctamente");
-                console.log("URL:", datos.secure_url);
+                console.log("URL de Cloudinary:", datos.url);
 
             } catch (error) {
 
-                console.error("Error al subir:", error);
+                console.error("Error:", error);
 
             }
 
         });
 
-        // Abrir selector de archivos
         input.click();
 
     });
@@ -93,7 +89,7 @@ digitos.forEach((input, index) => {
     });
 });
 
-
+ 
 // aqui termina mi codigo para validar ingreso por medio de telefono
 
 
@@ -173,7 +169,10 @@ function actualizarReloj() {
     document.getElementById("minuto").textContent = tiempo.minuto;
     document.getElementById("segundo").textContent = tiempo.segundo;
 
-    // Milisegundos
+    // Milisegundos     input.click();
+
+   
+
     document.getElementById("mili").textContent =
         String(tiempo.milisegundo).padStart(3, "0");
 
