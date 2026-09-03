@@ -16,12 +16,22 @@
    <script src="app.js"></script>
    <script>
     const elementodeCorfimacionderegistro = document.querySelector(".parrafo-dideño-div-confirmacion")
-     elementodeCorfimacionderegistro.textContent = localStorage.getItem("mensajeConfirmacion") || "";
+     
+
+       const basmanSUPERMAmujerMaravila= localStorage.getItem("ingresoexitosoParacambiar") || "";
+       const lamparacascoelquesemuere= localStorage.getItem("mensajeConfirmacion") || "";
+      if(lamparacascoelquesemuere){
+         elementodeCorfimacionderegistro.textContent = lamparacascoelquesemuere;
+      }else if(basmanSUPERMAmujerMaravila){
+        elementodeCorfimacionderegistro.textContent = basmanSUPERMAmujerMaravila;
+      }
 
      setTimeout(() => {
-     localStorage.removeItem("mensajeConfirmacion");
-     window.location.href = "./index.html";
+      localStorage.removeItem("mensajeConfirmacion");
+      localStorage.removeItem("ingresoexitosoParacambiar");
+      window.location.href = "./index.html";
      }, 5000);
+
 </script> 
 </body>
 </html>

@@ -1,4 +1,81 @@
+//aqui va toda las peticones para ingresar usuario
+const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado")|| "null");
+//aqui va todo cuando alguien se registra
+const usuarioQuenoseConfunda = JSON.parse(localStorage.getItem("usuarioRegistrado")|| "null");
+ 
 
+//vamos a quitar o borrar el localStorage tanto de la clase como la respusta del registro que obtubimos
+const eliminarSalir= document.getElementById("paraCerrarSecion");
+    eliminarSalir.addEventListener("click", ()=>{
+    localStorage.removeItem("registroCompletado");
+    localStorage.removeItem("usuarioRegistrado");
+    localStorage.removeItem("usuarioLogueado");
+    
+})
+
+
+//aqui va toda la repuesta del usuario ya registrado y que esta en el contenedor tenisNegras
+const contenedormiloniaTonia = document.querySelector(".aquiVaelDiplaynoneparaocultarelcontenedortesnisnegra");
+const registroCompletado1234 = localStorage.getItem("registroCompletado"); 
+if (registroCompletado1234 === "true") {
+     contenedormiloniaTonia.classList.remove( "aquiVaelDiplaynoneparaocultarelcontenedortesnisnegra" );
+}
+
+//si existe un usuario que haiga ingresado no me funcionara el registro
+
+if (usuarioLogueado !== null) {
+
+    // Existe un usuario logueado
+    document.getElementById("nombreComplotodelUsuario").textContent =
+        usuarioLogueado.nombre;
+    
+    //vamos a comprovoar si alguin hizo un click y agrego la imagen del usuario   
+    
+        if (usuarioLogueado && usuarioLogueado.imagen){
+            //quitamos el icono para agregar la imagen 
+            document.querySelector("#nuevaClaseAgregada").style.display = "none";
+            const imagenrecibidaContenedor= document.getElementById("idparaagregarIMAGENusuario")
+           // Creamos el elemento <img>
+            const imagen = document.createElement("img");
+           // Le ponemos la URL de Cloudinary que viene de MongoDB
+           imagen.src ="usuarioLogueado.usuario.imagen"    //  usuarioLogueado.imagen;
+           imagen.style.width = "99%";
+           imagen.style.height = "99%";
+           imagen.style.objectFit = "cover";
+           imagen.style.marginLeft = "auto";
+           imagen.style.marginRight = "auto";
+           imagen.style.border = "1px solid rgb(75, 74, 74)";
+           imagen.style.borderRadius = "50%";
+           
+           imagenrecibidaContenedor.appendChild(imagen);
+        }else {
+           document.querySelector("#nuevaClaseAgregada").style.display = " ";
+        }
+
+} else if (usuarioQuenoseConfunda !== null){
+
+    // No hay usuario logueado, pero sí hay usuario registrado
+    document.getElementById("nombreComplotodelUsuario").textContent =
+        usuarioQuenoseConfunda.nombre;
+
+} else {
+
+    // No existe ninguno usuario ni registrado ni iniciado el cual va a quedar en blanco
+}
+
+
+
+//aqui aqui termina toda la repuesta del usuario ya registrado y que esta en el contenedor tenisNegras
+
+
+
+
+
+
+
+
+
+//aqui va todo sobre la imagen que guardamos en cloudinary
 const filo = document.getElementById("idparaagregarIMAGENusuario");
 
 if (filo) {
@@ -42,6 +119,8 @@ if (filo) {
 
                 console.log("Imagen subida correctamente");
                 console.log("URL de Cloudinary:", datos.url);
+                // Guardamos la URL en localStorage para usarla en la página de registro 
+                localStorage.setItem("urlImagen", datos.url);
 
             } catch (error) {
 
@@ -66,32 +145,6 @@ if (filo) {
 
 
 
- // aqui va todo el js script de los digitos para ingresar y validar pormedio de correo o numero telefonico  
-
-const digitos = document.querySelectorAll('.digito');
-
-digitos.forEach((input, index) => {
-    input.addEventListener('input', function() {
-        // Permitir solo números
-        this.value = this.value.replace(/[^0-9]/g, '');
-
-        // Pasar al siguiente input
-        if (this.value !== '' && index < digitos.length - 1) {
-            digitos[index + 1].focus();
-        }
-    });
-
-    input.addEventListener('keydown', function(e) {
-        // Retroceder con Backspace
-        if (e.key === 'Backspace' && this.value === '' && index > 0) {
-            digitos[index - 1].focus();
-        }
-    });
-});
-
- 
-// aqui termina mi codigo para validar ingreso por medio de telefono
-
 
 
 
@@ -106,7 +159,6 @@ digitos.forEach((input, index) => {
 
 
 // aqui va todo la configuracion del reloj colombia
-
 const ZONA_HORARIA = "America/Bogota";
 
 function obtenerHoraBogota() {
@@ -164,27 +216,33 @@ function actualizarReloj() {
 
     const tiempo = obtenerHoraBogota();
 
-    // Hora
-    document.getElementById("hora").textContent = tiempo.hora;
-    document.getElementById("minuto").textContent = tiempo.minuto;
-    document.getElementById("segundo").textContent = tiempo.segundo;
+    const hora = document.getElementById("hora");
+    const minuto = document.getElementById("minuto");
+    const segundo = document.getElementById("segundo");
+    const mili = document.getElementById("mili");
+    const amPM = document.getElementById("amPM");
+    const dia = document.getElementById("dia");
+    const mes = document.getElementById("mes");
+    const anio = document.getElementById("anio");
 
-    // Milisegundos     input.click();
+    // Si esta página no tiene el reloj, no hacemos nada
+    if (!hora || !minuto || !segundo || !mili || !amPM || !dia || !mes || !anio) {
+        return;
+    }
 
-   
+    hora.textContent = tiempo.hora;
+    minuto.textContent = tiempo.minuto;
+    segundo.textContent = tiempo.segundo;
 
-    document.getElementById("mili").textContent =
+    mili.textContent =
         String(tiempo.milisegundo).padStart(3, "0");
 
-    // AM / PM
-    document.getElementById("amPM").textContent = tiempo.amPM;
+    amPM.textContent = tiempo.amPM;
 
-    // Fecha
-    document.getElementById("dia").textContent = tiempo.dia;
-    document.getElementById("mes").textContent = tiempo.mes;
-    document.getElementById("anio").textContent = tiempo.anio;
+    dia.textContent = tiempo.dia;
+    mes.textContent = tiempo.mes;
+    anio.textContent = tiempo.anio;
 
-    // Volver a actualizar en el siguiente frame
     requestAnimationFrame(actualizarReloj);
 }
 
@@ -204,83 +262,6 @@ actualizarReloj();
 //aqui va todo el codigo del scanner
 
 
-const btnScanner123 = document.getElementById("btnScannerHARASI");
-const scannerContainer = document.getElementById("scannerContainer");
-const videoScanner = document.getElementById("videoScanner");
-
-let controls = null;
-
-btnScanner123.addEventListener("click", async () => {
-
-    console.log("📷 Iniciando escáner PDF417...");
-
-    scannerContainer.style.display = "block";
-
-    try {
-
-        // Le decimos a ZXing:
-        // 1. Solo queremos PDF417
-        // 2. Que intente con mayor esfuerzo
-        const hints = new Map();
-
-        hints.set(
-            ZXingLibrary.DecodeHintType.POSSIBLE_FORMATS,
-            [ZXingLibrary.BarcodeFormat.PDF_417]
-        );
-
-        hints.set(
-            ZXingLibrary.DecodeHintType.TRY_HARDER,
-            true
-        );
-
-        const codeReader =
-            new ZXingBrowser.BrowserMultiFormatReader(hints);
-
-        console.log("🔎 Buscando PDF417...");
-
-        // Usar directamente la cámara trasera
-        controls = await codeReader.decodeFromVideoDevice(
-            undefined,
-            videoScanner,
-            (result, error) => {
-
-                if (result) {
-
-                    console.log("================================");
-                    console.log("🎉 ¡PDF417 DETECTADO!");
-                    console.log("================================");
-
-                    console.log("Formato:");
-                    console.log(result.getBarcodeFormat());
-
-                    console.log("Texto:");
-                    console.log(result.getText());
-
-                    console.log("Objeto completo:");
-                    console.log(result);
-
-                    console.log("================================");
-
-                    // Detener scanner
-                    if (controls) {
-                        controls.stop();
-                        controls = null;
-                    }
-
-                    scannerContainer.style.display = "none";
-                }
-
-            }
-        );
-
-    } catch (error) {
-
-        console.error("❌ ERROR DEL ESCÁNER");
-        console.error(error);
-
-    }
-
-});
 
 
 //aqui termina todo el codigo del scaner 

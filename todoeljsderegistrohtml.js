@@ -72,6 +72,8 @@ pabloEscovaracecino.addEventListener("click", () => {
      const cieloTENIS = document.getElementById("quienseraELLA");
      const chocola = document.getElementById("yosequienEsella");
      const mateo = document.querySelector(".parrafoROJO")
+     //esta es la repuesta que tenemos del archivo para poner la imagen osea biene de claudinary
+     const urlImagen = localStorage.getItem("urlImagen");
      
      
 
@@ -145,6 +147,19 @@ pabloEscovaracecino.addEventListener("click", () => {
      //aqui va todo el event listene submit cara que no se envia asta que se le ordene
       ventiladorMalo.addEventListener("submit", async (e) =>{
        e.preventDefault();
+
+           //Comprobamos si ya hay un usuario iniciado 
+           const usuarioLogueado = JSON.parse( localStorage.getItem("usuarioLogueado") || "null" );
+           if (usuarioLogueado !== null) { 
+           mateo.textContent = "Ya hay un usuario iniciado. Debes cerrar sesión antes de registrar otro usuario.";
+           setTimeout(() => { 
+           mateo.textContent = "";
+           }, 5000);
+          return; 
+       }
+
+
+
        //aquiva la validacion del input nombre completo perodentro del submit
        const valido = cascooscuro.value.trim().toLowerCase()
        const expresion = /^[\p{L}\p{N}\s'-]+$/u;
@@ -236,11 +251,11 @@ pabloEscovaracecino.addEventListener("click", () => {
           documento: ajo.value.trim(),
           correo: cieloTENIS.value.trim().toLowerCase(),
           celular: chocola.value.trim(),
-          contraseña: ventiladorPRENDIDO.value
+          contraseña: ventiladorPRENDIDO.value,
         };
 
        const respuesta = await fetch("http://localhost:3000/api/items", {
-        method: "POST",
+         method: "POST",
          headers: {
          "Content-Type": "application/json"
          },
@@ -254,6 +269,37 @@ pabloEscovaracecino.addEventListener("click", () => {
        const resultado = await respuesta.json();
 
         console.log("Respuesta del servidor:", resultado);
+        //obtenemos el id de cada registro que llega desde mongodb
+        const idUsuario = resultado.registrousuario._id;
+        //obtenemos la url de la imagen que viene de de claudinary para guardala en mongodb
+        const urlImagen = localStorage.getItem("urlImagen");
+        console.log("ID del usuario:", idUsuario);
+        console.log("URL de imagen:", urlImagen);
+
+        const respuestaImagen = await fetch(
+         `http://localhost:3000/api/items/${idUsuario}/imagen`,
+        {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            imagen: urlImagen
+         })
+        }
+       );
+
+      const resultadoImagen = await respuestaImagen.json();
+
+      console.log("Respuesta de la imagen:", resultadoImagen);
+      // cuando tenemos la repuesta de express y todo sale correcto lo almacenamos en localstorage para remover lacase que tiene display none 
+       localStorage.setItem("registroCompletado", "true");
+      //guardamos toda la repusta del registro para utilizarla en localStorage y poder utilizarla en otra pagina
+       
+
+       // AQUÍ guardamos el usuario actualizado con la imagen
+      localStorage.setItem("usuarioRegistrado",JSON.stringify(resultadoImagen.usuario));
+
 
         ventiladorMalo.reset();
 

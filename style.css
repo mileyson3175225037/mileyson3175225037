@@ -242,6 +242,10 @@
   position: relative;
 }
 
+.aquiVaelDiplaynoneparaocultarelcontenedortesnisnegra{
+  display: none;
+}
+
 
 .contenedorPrahover{
   height: 100%;
@@ -304,13 +308,14 @@
 
 .inputFalo{
   width: 50px;
-  height: 50px;
+  height: 52px;
   border-radius: 50%;
   background: white;
   margin-left: 10px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  box-shadow: 0 10px 25px rgba(116, 115, 115, 0.4);
 }
 
 .inputFalo i {
@@ -1454,6 +1459,15 @@ textarea{
   margin-top: 5px;
 }
 
+.verificacion-para-que-todo-funcionebien-perdida-de-contraseñaphp  input{
+  text-align: center;
+  font-size: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .div-padre-de-validacion-de-codigo-perdida-de-contraseñaphp{
  width: 260px;
  height: auto;
@@ -1470,6 +1484,20 @@ textarea{
  margin-bottom: 5px;
 }
 
+.nuevocambioparamiscontenedorDigito{
+ display: none;
+}
+
+
+.submitaudio{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+
 .parrafo-centrar-parrafo-perdida-de-contraseñaphp{
  text-align: center;
  font-size: 20px;
@@ -1484,6 +1512,8 @@ textarea{
   align-items: center;
   border-radius: 5px;
   border: 1px solid rgb(44, 44, 44);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .digito{
@@ -1494,6 +1524,20 @@ textarea{
   box-shadow: 1px 1px 1px 1px rgb(32, 32, 32);
   background-color: rgb(230, 228, 228);
 }
+.erroresdelPROCESOenEspañol{
+   font-size: 20px;
+   text-align: center;
+   color: red;
+   margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
 
 
 
