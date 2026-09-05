@@ -334,7 +334,7 @@
 .masGRANDEqueotros{
   margin-left: 10px;
   height: 100%;
-  
+  cursor: pointer;
   width: auto;
   display: flex;
   align-items: center;

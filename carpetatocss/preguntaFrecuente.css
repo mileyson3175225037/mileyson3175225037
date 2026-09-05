@@ -1,0 +1,101 @@
+.colorgrisParaelAire{
+    display: flex;
+     margin: 0;
+    background-color: #546275;
+}
+
+.elmasPadreQuetengo{
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(253, 252, 252);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px 2px rgb(179, 177, 177);
+  border: solid 1px rgb(58, 58, 58);
+  padding: 0;
+}
+
+.tamañodeMicontenedorparaComentario{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(199, 198, 198);
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px rgb(26, 25, 25);
+}
+
+.btn-back-milo {
+   height: 40px;
+   width: 40px;
+   background-color: rgb(63, 59, 250);
+   display: flex;
+   align-items: center;
+   margin-left: 10px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 1px 1px rgb(212, 211, 211);
+   border: 1px solid rgb(61, 61, 61);
+   text-decoration: none;
+}
+
+#identificador-css{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  color: white;
+}
+
+.btn-back-milo:hover {
+    background: #3213e2;
+    border: 1px solid black;
+}
+
+.tamañoExtranoNoloConosco{
+   margin-left: 50px;
+   font-size: 25px;
+   color: black;
+}
+
+.pregunta {
+    border-bottom: 1px solid #ddd;
+}
+
+.tituloPregunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.tituloPregunta span{
+    font-size: 20px;
+    color: black;
+}
+
+.flecha {
+    transition: transform 0.3s ease;
+}
+
+.respuesta {
+    display: none;
+    padding: 0 18px 18px;
+}
+
+.respuesta p {
+    font-size: 19px;
+    color: black;
+}
+
+/* Cuando la pregunta está abierta */
+.pregunta.activa .respuesta {
+    display: block;
+}
+
+/* Girar la flecha */
+.pregunta.activa .flecha {
+    transform: rotate(180deg);
+}
