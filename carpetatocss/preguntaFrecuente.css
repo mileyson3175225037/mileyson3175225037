@@ -1,11 +1,13 @@
 .colorgrisParaelAire{
     display: flex;
-     margin: 0;
+    margin: 0;
     background-color: #546275;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 .elmasPadreQuetengo{
-  width: 400px;
+  width: 600px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -98,4 +100,12 @@
 /* Girar la flecha */
 .pregunta.activa .flecha {
     transform: rotate(180deg);
+}
+
+@media (max-width: 800px){
+ .elmasPadreQuetengo{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+ }
 }
