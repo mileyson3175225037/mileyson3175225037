@@ -20,15 +20,33 @@
 
        const basmanSUPERMAmujerMaravila= localStorage.getItem("ingresoexitosoParacambiar") || "";
        const lamparacascoelquesemuere= localStorage.getItem("mensajeConfirmacion") || "";
+       const otraconFirmacionRapida= localStorage.getItem("mensajeComentario") || "";
+       const siriaco = localStorage.getItem("mensajeCambioContraseña") || "";
+       const confir = localStorage.getItem("mensajeModificacion") || "";
+       const contacto = localStorage.getItem("mensagecontacto") || "";
+       
+                               
       if(lamparacascoelquesemuere){
          elementodeCorfimacionderegistro.textContent = lamparacascoelquesemuere;
       }else if(basmanSUPERMAmujerMaravila){
         elementodeCorfimacionderegistro.textContent = basmanSUPERMAmujerMaravila;
+      }else if(otraconFirmacionRapida){
+        elementodeCorfimacionderegistro.textContent = otraconFirmacionRapida;
+      }else if(siriaco){
+        elementodeCorfimacionderegistro.textContent = siriaco;
+      }else if(confir){
+        elementodeCorfimacionderegistro.textContent = confir;
+      }else if(contacto){
+       elementodeCorfimacionderegistro.textContent = contacto;
       }
 
      setTimeout(() => {
       localStorage.removeItem("mensajeConfirmacion");
       localStorage.removeItem("ingresoexitosoParacambiar");
+      localStorage.removeItem("mensajeComentario");
+      localStorage.removeItem("mensajeCambioContraseña");
+      localStorage.removeItem("mensajeModificacion");
+      localStorage.removeItem("mensagecontacto");
       window.location.href = "./index.html";
      }, 5000);
 

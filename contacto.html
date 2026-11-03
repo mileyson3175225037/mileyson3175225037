@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documento</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carpetatocss/conctato.css">
 </head>
 
 <body class="contenedor-principal-arcivo-descarga">
@@ -18,35 +18,34 @@
                </a>
                <p class="gorra-para-que-vea">TuSOAT</p>
         </section>
-            <h1 class="idolomiloAquiStoymilon">Cuéntanos qué necesitas y te contactaremos lo antes posible.</h1>
+            <h1 class="idolomiloAquiStoymilon">Cuéntanos tu problema y te contactaremos lo antes posible.</h1>
          <div class="cuerpo-del-encavezado" >
-              <form class="formulario">
-
-                <div class="grupo">
-                 <label>Nombre</label>
-                 <input type="text" placeholder="Ingresa tu nombre">
+              <form id="formularioContacto" class="formulario">
+                 <p class="ClaseDisplaynone  tamañoContenedor">porque medio te gustaria recibir informacion</p>
+                  <p class="tamañoContenedor">preciona el boton de tu correo</p>
+                <div class="nuevoCONTENDOR">
+                  <button id="botoncorreo" class="primerBoton">correo electronico  <i id="quitarlelACLASE" class="ClaseDisplaynone colorrojoParalaflecha fa-solid fa-check"></i></button>
                 </div>
 
-                <div class="grupo">
-                 <label>Correo</label>
-                 <input type="email" placeholder="Ingresa tu correo">
+                <div class="nuevoCONTENDOR">
                 </div>
 
                 <div class="grupo">
                  <label>Mensaje</label>
-                 <textarea placeholder="Escribe tu mensaje"></textarea>
+                 <textarea id="JsScripttextarea" placeholder="Escribe tu mensaje"></textarea>
                 </div>
+                
 
-                <button type="submit" class="boton">
+                <button id="botomSumit" type="submit" class="boton">
                   Enviar Mensaje
                  </button>
 
                </form>
         </div>
-            <p class="erroresPacorregirSeñorescreanlo">todos los campos son obligatorios </p>
+            <p id="parrafoseñal" class="erroresPacorregirSeñorescreanlo"> </p>
     </div>
 
-   <script src="app.js"></script> 
+   <script src="todoElcodigojs/conctato.js"></script> 
 </body>
 
 </html>

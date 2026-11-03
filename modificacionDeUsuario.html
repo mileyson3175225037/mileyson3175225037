@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="carpetatocss/modificacionDeUsuario.css">
+</head>
+<body>
+    
+      <!--este es el contenedor principal que valida porque medio se va a enviar el otp -->
+      <div id="quierloponerleDisplayBlock" class="tamañoFormulario">
+       <div class="contenedor-principal-para-poner-el-icono-de-flecha">
+           <a href="index.html" class="btn-back-milo">
+            <i id="identificador-css" class="fa-solid fa-arrow-left"></i>
+           </a>
+           <p class="gorra-para-que-vea">TuSOAT</p>
+        </div>
+
+
+        <p class="css-para-el-texto-perdida-de-contraseñaphp">Dónde quieres recibir el código de verificación para modificar tus datos</p>
+          <button class="submitaudio" id="btnCorreoModificarUsuario">
+            Correo electronico
+          </button>
+
+         <button class="submitaudio" id="btnWhatsappModificarUsuario">
+           Numero de whatsapp
+         </button>
+           <p id="mensajeModificarUsuario" class="colorRojoParaElparrafo"></p>
+      </div>
+
+
+
+        <!-- esta es la validacion cuanado llegue el codigo generado por el otp -->
+        <div id="contenedorOTPModificarUsuario"  class="bianchiUmedo    div-padre-de-validacion-de-codigo-perdida-de-contraseñaphp">
+         <p class="parrafo-centrar-parrafo-perdida-de-contraseñaphp">porfavor ingrese el codigo que le enviamos</p>
+          <div class="codigos-paravalidar-perdida-de-contraseñaphp">
+           <input type="text" maxlength="1" class="digito">
+           <input type="text" maxlength="1" class="digito">
+           <input type="text" maxlength="1" class="digito">
+           <input type="text" maxlength="1" class="digito">
+          </div>
+            <p id="mensajeModificarUsuario" class="colorRojoParaElparrafo"></p>
+        </div>
+
+
+
+
+
+
+       <!-- este es el ultimo contenedor que cuando todo se valide carga la informacion del cliente  -->
+      <section id="agregemolesESTO" class="bianchiUmedo   tamañocontenerdorLOTENGOclaro">
+        <div class="contenedor-principal-para-poner-el-icono-de-flecha">
+           <a href="index.html" class="btn-back-milo">
+            <i id="identificador-css" class="fa-solid fa-arrow-left"></i>
+           </a>
+           <p class="gorra-para-que-vea">TuSOAT</p>
+        </div>
+       <form class="formularioModificarUsuario"> 
+        <h2 class="tituloModificarDatos">Modificar datos del usuario</h2>
+         <!-- Nombre completo -->
+        <input 
+            type="text" 
+            id="nombreCompleto" 
+            name="nombreCompleto"
+            placeholder="Ingresa tu nombre completo"
+            required
+            >
+        
+        <!-- Tipo de documento -->
+          <select
+            class="loquieroCRECERseñores" 
+            id="tipoDocumento" 
+            name="tipoDocumento"
+            required
+            >
+            <option value="">Selecciona un tipo de documento</option>
+            <option value="CC">Cédula de ciudadanía</option>
+            <option value="CE">Cédula de extranjería</option>
+            <option value="PAS">Pasaporte</option>
+          </select>
+        
+
+         <!-- Número de documento -->
+       
+       
+          <input 
+            type="text" 
+            id="numeroDocumento" 
+            name="numeroDocumento"
+            placeholder="Ingresa tu número de documento"
+            required
+            >
+    
+
+        <!-- Correo electrónico -->
+       
+        
+        <input 
+            type="email" 
+            id="correoElectronico" 
+            name="correoElectronico"
+            placeholder="Ingresa tu correo electrónico"
+            required
+            >
+         
+
+          <!-- Número de celular -->
+         
+          
+          <input 
+            type="tel" 
+            id="numeroCelular" 
+            name="numeroCelular"
+            placeholder="Ingresa tu número de celular"
+            required
+            >
+         
+         <!-- Nueva contraseña -->
+         
+      
+
+          <input
+          type="password"
+          id="nuevaContraseña"
+          name="nuevaContraseña"
+          placeholder="Ingresa tu nueva contraseña"
+          >
+        
+
+        <!-- Repetir nueva contraseña -->
+        
+         <input
+         type="password"
+         id="repetirContraseña"
+         name="repetirContraseña"
+         placeholder="Repite tu nueva contraseña"
+         >
+       
+
+         <!-- Botón -->
+        <button class="boton" type="submit">
+           Guardar cambios
+        </button>
+       </form>
+        <p id="mensajeModificarUsuario" class="colorRojoParaElparrafo"></p>
+       </section>
+     
+    <script src="todoElcodigojs/modificacionDeUsuario.js"></script>
+</body>
+</html>

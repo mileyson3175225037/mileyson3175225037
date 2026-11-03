@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-                 Roboto, Helvetica, Arial, sans-serif;
+  Roboto, Helvetica, Arial, sans-serif;
 }
 
 .computador{
@@ -310,10 +310,12 @@
   width: 50px;
   height: 52px;
   border-radius: 50%;
-  background: white;
+  background: rgb(231, 231, 231);
   margin-left: 10px;
   display: flex;
   align-items: center;
+  font-size: 25px;
+  justify-content: center;
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(116, 115, 115, 0.4);
 }
@@ -429,7 +431,6 @@
 
   .arrozConverdura{
     height: auto;
-    width: 100%;
   }
 
 }
@@ -701,232 +702,6 @@ button:hover {
 
 
 
-/* todo el css de mi archivo  contacto.html y el archivo descarga tienen el mismo css solo en el contenedor principal*/
-
-.contenedor-principal-arcivo-descarga{
-  background-color: rgb(68, 68, 68);
-
-}
-
-.color-fondo{
-  width: 400px;
-  height: 600px;
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  border-radius: 5px 5px 5px 5px;
-  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
-  padding: 5px 5px 5px 5px;
-}
-
-.teclado-malo{
-  width: 100%;
-  height: 75px;
-  background-color: rgb(235, 230, 230);
-  display: flex;
-  align-items: center;
-  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
-}
-
-.ventilador-aqui{
-  color: rgb(74, 37, 238);
-  font-size: 40px;
-  margin-left: 5px;
-}
-
-.btn-back-milo {
-   background-color: rgb(63, 59, 250);
-   justify-content: center;
-   align-items: center;
-   margin-left: 10px;
-   border-radius: 5px;
-   box-shadow: 1px 1px 1px 1px rgb(212, 211, 211);
-   border: 1px solid rgb(61, 61, 61);
-
-}
-
-#identificador-css{
-  margin-left: auto;
-  margin-right: auto;
-  margin: 5px 8px 5px 8px;
-}
-
-.btn-back-milo:hover {
-    background: #3213e2;
-    border: 1px solid black;
-}
-
-.cuerpo-del-encavezado{
-  background-color: white;
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
-}
-
-.gorra-para-que-vea{
-  font-size: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.idolomiloAquiStoymilon{
-  text-align: center;
-  font-size: 25px;
-  margin-bottom: 5px;
-}
-
-.formulario{
-    display:flex;
-    flex-direction:column;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.grupo{
-    display:flex;
-    flex-direction:column;
-    height: auto;
-}
-
-label{
-    margin-bottom:8px;
-    font-weight:bold;
-    color:black;
-    font-size: 20px;
-    margin-left: 2px;
-}
-
-input,
-textarea{
-    padding:14px;
-    border:2px solid #cbd5e1;
-    border-radius:12px;
-    outline:none;
-    transition:0.3s;
-    font-size:15px;
-}
-
-input:focus,
-textarea:focus{
-    border-color:#2563eb;
-    box-shadow:0 0 10px rgba(37,99,235,0.3);
-}
-
-textarea{
-    resize:none;
-    height:120px;
-}
-
-.boton{
-    background:#2563eb;
-    color:white;
-    width: 250px;
-    height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.boton:hover{
-    background:#1d4ed8;
-    transform:scale(1.03);
-}
-
-.erroresPacorregirSeñorescreanlo{
-  color: red;
-  font-size: 20px;
-  margin-top: 5px;
-  text-align: center;
-}
-
-@media (max-width: 498px){
-.color-fondo{
-  width: 100%;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-.boton{
-  margin-top: 25px;
-}
-}
-
-
-
-
-
-/* aqui va todo el css de la pagina para descargar tu soat*/
-
-.heder-de-mi-descargasoat{
-  width: 100%;
-  height: 80px;
-  background-color: rgb(218, 216, 216);
-  display: flex;
-  align-items: center;
-  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
-}
-
-.parrafo-informacion{
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 30px;
-}
-
-.cuerpo-div-descargasoat{
-  height: auto;
-  width: 100%;
-  background-color: white;
-  padding: 5px;
-  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
-}
-
-.otro-cuerpo-para-descargar-soat{
-  height: 200px;
-  width: 100%;
-  background-color: rgb(218, 216, 216);
-  margin-top: 5px;
-  border-radius: 5px;
-  overflow-y: auto; /* scroll vertical */
-  overflow-x: hidden; /* evita scroll horizontal */
-  padding-left: 10px;
-  padding-right: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.formulario-de-descargasoat{
-  width: 100%;
-  height: 190px;
-  background-color: white;
-  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
-  border-radius: 5px;
-}
-
-.grupo-descargasoat{
-  width: 100%;
-  height: auto;
-  display: flex;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  justify-content: center;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-.input-formulario-descargarsoat{
-  width: 80%;
-}
-
-.boton-formulario-descargar-soat{
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 200px;
-}
-
-
 
 
 
@@ -1066,136 +841,6 @@ textarea{
   }
 }
 
-
-
-
-
-
-
-/* aqui va todo el css de la pagina para registro.html*/
-
-.body-del-registrophp{
-  background-color: rgb(73, 73, 73);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-registro-para-mi-archivo-de-registro {
-  width: 400px;
-  height: auto;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-top: 15px;
-  padding: 5px;
-}
-
-.formulario-importante-para-crear{
-  width: 100%;
-  height: auto;
-  background-color: rgb(223, 221, 221);
-  display: flex;
-  flex-direction: column;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.arrozcieloChanclauva{
-  height: 50px;
-  margin-top: 5px;
-  width: 100%;
-  margin-bottom: 5px;
-  box-shadow: 0 4px 12px rgb(66, 66, 66);
-  border: solid 2px rgb(56, 56, 252);
-  color: rgb(121, 121, 121);
-}
-
-.containerojoPARAbrirycerrarelojo{
-  height: 50px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-#togglePassword{
-  position: absolute;
-}
-
-
-.plataAgena{
-  font-size: 25px;
-  position: absolute;
-  right: 5px;
-  color: green;
-  z-index: -2;
-}
-
-.DineromioClaro{
-  font-size: 25px;
-  position: absolute;
-  right: 5px;
-  color: red;
-  z-index: -2;
-}
-
-/* aqui va todo lo que le tenemos que agregar a nuestro input cuando este correcto y lo llamre desde js scrip quitar y agregar */
-
-.agregar{
- 
-  z-index: 2;
-}
-
-.celulargrande{
-  border: solid 4px red;
-}
-
-/* aqui termina todo lo que le tenemos que agregar a nuestro input cuando este correcto y lo llamre desde js scrip quitar y agregar */
-
-#togglePasswordAhorasi{
-  font-size: 25px;
-  position: absolute;
-  right: 5px;
-  cursor: pointer;
-}
-
-#togglePasswordAhorano{
-  font-size: 25px;
-  position: absolute;
-  right: 5px;
-  cursor: pointer;
-}
-
-
-.botonDehoroZapato{
-  width: 250px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 12px rgb(66, 66, 66);
-}
-
-.lavaderoBañoDesocrateCIRIACO{
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.parrafoROJO{
-  color: red;
-  font-size: 20px;
-  text-align: center;
-}
-
-@media (max-width: 498px){
-  .card-registro-para-mi-archivo-de-registro{
-    width: 100%;
-    margin-left: 1px;
-    margin-right: 1px;
-  }
-}
 
 
 
@@ -1402,6 +1047,7 @@ textarea{
 .parrafo-dideño-div-confirmacion{
   font-size: 20px;
   margin-top: 5px;
+  text-align: center;
 }
 
 
@@ -1656,18 +1302,104 @@ textarea{
   flex-direction: column;
   box-shadow: 2px 2px 2px 2px gray;
 }
+
 .hijoDecomentarioDelosClientes{
-  height: 300px;
+  height: auto;
   width: 100%;
   background-color: rgb(248, 247, 247);
   border-radius: 2px;
   box-shadow: 2px 2px 2px 2px gray;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 1px;
   margin-right: 1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  gap: 20px;
+  scroll-behavior: smooth;
+  /* Evitar que el navegador haga selección de texto */
+   user-select: none;
+   /* El cursor indica que se puede agarrar */
+   cursor: grab;
+}
+/* Ocultar barra en Chrome, Edge y Safari */
+.hijoDecomentarioDelosClientes::-webkit-scrollbar {
+    display: none;
 }
 
+.nombreComentario{
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+.estrellasComentario{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+.descripcionComentario{
+  width: 95%;
+  height: auto;
+  margin-top: 5px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(206, 205, 205);
+}
+
+.comentarioIndividual {
+    width: 260px;
+    min-height: 380px;
+    height: auto;
+    background-color: rgb(190, 189, 189);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(75, 75, 75);
+    display: flex;
+    flex-direction: column;
+    /* Evita que palabras largas se salgan */
+    overflow-wrap: break-word;
+    /* También permite romper palabras demasiado largas */
+    word-break: break-word;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+/* aqui va todo el css para los contenedores que definimos desde js script y es para el carrusel y se obtiene por clasList*/
+
+
+.primeraLetra{
+  width: 70px;
+  height: 70px;
+  background-color: rgb(120, 120, 252);
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(75, 75, 75);
+}
+
+/* aqui termina todo el css para los contenedores que definimos desde js script y es para el carrusel y se llama por claslist*/
 .bombilloRojo{
   height: 100px;
   width: 100%;
@@ -1686,15 +1418,6 @@ textarea{
   text-align: center;
 }
 
-.bombilloRojo123{
-  height: 70px;
-  width: 100%;
-  background-color: #6c82a0;
-  display: flex;
-  align-items: center;
-  margin-left: 1px;
-  margin-right: 1px;
-}
 
 .zapatosToldilloNegro{
   width: 40px;
@@ -1725,7 +1448,6 @@ textarea{
  @media (max-width: 500px){
   .footer{
     width: 100%;
-    flex-wrap: wrap;
   }
   .imagenParaCentrarlo{
     width: auto;

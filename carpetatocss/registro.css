@@ -1,0 +1,173 @@
+
+/* aqui va todo el css de la pagina para registro.html*/
+
+.body-del-registrophp{
+  background-color: rgb(131, 130, 130);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-registro-para-mi-archivo-de-registro {
+  width: 400px;
+  height: auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 15px;
+  padding: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-back-milo{
+  padding: 10px 10px 10px 10px;
+  background-color: blue;
+  margin-left: 10px;
+  font-size: 19px;
+  border-radius: 5px;
+  color: white;
+}
+
+.gorra-para-que-vea{
+  font-size: 22px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.encavezado-de-mi-ingresar-php{
+  width: 100%;
+  height: auto;
+  background-color: rgb(192, 191, 191);
+  display: flex;
+  align-items: center;
+}
+
+.formulario-importante-para-crear{
+  width: 97%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(223, 221, 221);
+  display: flex;
+  flex-direction: column;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: hidden;
+}
+
+.amorMiolaquieroMuchoPeroellaAmiNO{
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+}
+
+.arrozcieloChanclauva{
+  height: 45px;
+  margin-top: 5px;
+  width: 100%;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 12px rgb(66, 66, 66);
+  border: solid 2px rgb(56, 56, 252);
+  color: rgb(121, 121, 121);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  font-size: 19px;
+}
+
+.containerojoPARAbrirycerrarelojo{
+  height: 50px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#togglePassword{
+  position: absolute;
+}
+
+
+.plataAgena{
+  font-size: 25px;
+  position: absolute;
+  right: 5px;
+  color: green;
+  z-index: -2;
+}
+
+.DineromioClaro{
+  font-size: 25px;
+  position: absolute;
+  right: 5px;
+  color: red;
+  z-index: -2;
+}
+
+/* aqui va todo lo que le tenemos que agregar a nuestro input cuando este correcto y lo llamre desde js scrip quitar y agregar */
+
+.agregar{
+ 
+  z-index: 2;
+}
+
+.celulargrande{
+  border: solid 4px red;
+}
+
+/* aqui termina todo lo que le tenemos que agregar a nuestro input cuando este correcto y lo llamre desde js scrip quitar y agregar */
+
+#togglePasswordAhorasi{
+  font-size: 25px;
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}
+
+#togglePasswordAhorano{
+  font-size: 25px;
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}
+
+
+.botonDehoroZapato{
+  width: 250px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgb(66, 66, 66);
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.botonDehoroZapato:hover{
+  background-color: blue;
+  color: white;
+}
+
+.lavaderoBañoDesocrateCIRIACO{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parrafoROJO{
+  color: red;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (max-width: 498px){
+  .card-registro-para-mi-archivo-de-registro{
+    width: 100%;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+}
+

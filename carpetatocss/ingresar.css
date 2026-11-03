@@ -1,0 +1,135 @@
+/* aqui va todo el css de la pagina para ingresar.html*/
+
+.body-de-mi-ingresarphp-elMejor{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.section-de-mi-ingresarphp{
+  background-color: rgb(72, 72, 240);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px red;
+}
+
+.div-donde-va-mi-formulario-ingresarphp{
+  width: 400px;
+  height: 550px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px rgb(48, 47, 47);
+}
+
+
+.encavezado-de-mi-ingresar-php{
+  height: 80px;
+  width: 100%;
+  background-color: rgb(168, 167, 167);
+  border-radius: 5px 5px 0px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.form-login-de-paginaweb-ingresarphp{
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: rgb(231, 229, 229);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parafo-para-ingresar-en-los-input{
+  margin-top: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.input-y-stilo-ingresarphp{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 250px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.boton-de-mi-ingresarphp{
+  width: 200px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
+}
+
+.recuperarcontraseña-y-ingresar-con-codigo{
+  width: 100%;
+  height: 250px;
+  background-color: rgb(118, 118, 247);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0
+  ;
+}
+
+.clase-para-recuperar-contraseña-ingresarphp{
+  font-size: 18px;
+  text-align: center;
+}
+
+.ingresa-mas-rapido-ingresarphp{
+  text-align: center;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.grandeMEABURROdetodolomalo{
+  width: 100%;
+  height: 80px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 223, 223);
+}
+/* cuando falle sepone el parrafo paraDarlecolorALmensajedeAvertencia y tambien grandeMEABURROdetodolomalo*/
+.paraDarlecolorALmensajedeAvertencia{
+  font-size: 20px;
+  color: red;
+  text-align: center;
+}
+
+.ingresa-mas-rapido-ingresarphp:hover{
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+@media (max-width: 800px){
+  .contenedores-de-mi-ingresarphp{
+    display: none;
+  }
+
+  .body-de-mi-ingresarphp-elMejor{
+    background-color: grey;
+  }
+}
+
+@media (max-width: 498px){
+  .div-donde-va-mi-formulario-ingresarphp{
+    width: 100%;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+}

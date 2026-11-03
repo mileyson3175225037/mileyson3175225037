@@ -1,0 +1,142 @@
+.contenedor-principal-arcivo-descarga{
+  background-color: rgb(68, 68, 68);
+
+}
+
+
+.color-fondo{
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
+  padding: 5px 5px 5px 5px;
+  overflow: hidden;
+}
+
+.heder-de-mi-descargasoat{
+  width: 100%;
+  height: 80px;
+  background-color: rgb(218, 216, 216);
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
+}
+
+.btn-back-milo {
+   background-color: rgb(63, 59, 250);
+   justify-content: center;
+   align-items: center;
+   margin-left: 10px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 1px 1px rgb(212, 211, 211);
+   border: 1px solid rgb(61, 61, 61);
+   padding: 5px 5px 5px 5px;
+   color: white;
+   font-size: 20px;
+}
+
+.btn-back-milo i{
+  font-family: 25px;
+}
+
+.btn-back-milo:hover {
+    background: #3213e2;
+    border: 1px solid black;
+}
+
+#identificador-css{
+  margin-left: auto;
+  margin-right: auto;
+  margin: 5px 8px 5px 8px;
+}
+
+.parrafo-informacion{
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 30px;
+}
+
+.cuerpo-div-descargasoat{
+  height: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
+  overflow: hidden;
+}
+
+.parrafodescarga{
+  font-size: 19px;
+  text-align: center;
+}
+
+.otro-cuerpo-para-descargar-soat{
+  height: 180px;
+  width: 95%;
+  background-color: rgb(218, 216, 216);
+  margin-top: 5px;
+  border-radius: 5px;
+  overflow-y: auto; /* scroll vertical */
+  overflow-x: hidden; /* evita scroll horizontal */
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.formulario-de-descargasoat{
+  width: 100%;
+  height: 190px;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(224, 145, 145);
+  border-radius: 5px;
+}
+
+.grupo-descargasoat{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.input-formulario-descargarsoat{
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.boton-formulario-descargar-soat{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 200px;
+   height: 40px;
+   border-radius: 5px;
+   font-size: 15px;
+}
+
+.boton-formulario-descargar-soat:hover{
+  background-color: rgb(78, 78, 241);
+}
+
+
+@media (max-width: 498px){
+.color-fondo{
+  width: 100%;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+}
