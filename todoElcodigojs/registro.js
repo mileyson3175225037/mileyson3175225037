@@ -277,7 +277,7 @@ pabloEscovaracecino.addEventListener("click", () => {
         console.log("URL de imagen:", urlImagen);
 
         const respuestaImagen = await fetch(
-          `${false
+          `${true
            ? "https://tusoat-backend.onrender.com"
            : "http://localhost:3000"
            }/api/items/${idUsuario}/imagen`,
