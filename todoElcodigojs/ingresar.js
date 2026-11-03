@@ -13,11 +13,12 @@ formularioIngresar.addEventListener("submit", async (e) => {
     console.log("Clave:", clave);
 
     try {
-        const respuestavalidacio = await fetch(
-          `${true
-             ? "https://tusoat-backend.onrender.com"
-             : "http://localhost:3000"
-            }/api/ingresar`,
+        const respuestavalidacio = await fetch("https://tusoat-backend.onrender.com/api/items", 
+
+          //`${true
+           //  ? "https://tusoat-backend.onrender.com"
+            // : "http://localhost:3000"
+          //  }/api/ingresar`,
             //"http://localhost:3000/api/ingresar", 
             {
             method: "POST",
