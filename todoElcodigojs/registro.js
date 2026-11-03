@@ -254,7 +254,7 @@ pabloEscovaracecino.addEventListener("click", () => {
           contraseña: ventiladorPRENDIDO.value,
         };
 
-       const respuesta = await fetch("http://localhost:3000/api/items", {
+       const respuesta = await fetch("https://tusoat-backend.onrender.com/api/items", {
          method: "POST",
          headers: {
          "Content-Type": "application/json"
@@ -276,7 +276,7 @@ pabloEscovaracecino.addEventListener("click", () => {
         console.log("ID del usuario:", idUsuario);
         console.log("URL de imagen:", urlImagen);
 
-        const respuestaImagen = await fetch("https://tusoat-backend.onrender.com/api/items", 
+        const respuestaImagen = await fetch( 
          /* `${true
            ? "https://tusoat-backend.onrender.com"
            : "http://localhost:3000"
