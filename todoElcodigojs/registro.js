@@ -254,72 +254,68 @@ pabloEscovaracecino.addEventListener("click", () => {
           contraseña: ventiladorPRENDIDO.value,
         };
 
-       const respuesta = await fetch("https://tusoat-backend.onrender.com/api/items", {
-         method: "POST",
-         headers: {
-         "Content-Type": "application/json"
-         },
-         body: JSON.stringify(datosRegistro)
-        });
-
-        if (!respuesta.ok) {
-         throw new Error("No se pudo completar el registro");
-        }
-
-       const resultado = await respuesta.json();
-
-        console.log("Respuesta del servidor:", resultado);
-        //obtenemos el id de cada registro que llega desde mongodb
-        const idUsuario = resultado.registrousuario._id;
-        //obtenemos la url de la imagen que viene de de claudinary para guardala en mongodb
-        const urlImagen = localStorage.getItem("urlImagen");
-        console.log("ID del usuario:", idUsuario);
-        console.log("URL de imagen:", urlImagen);
-
-        const respuestaImagen = await fetch( 
-         /* `${true
-           ? "https://tusoat-backend.onrender.com"
-           : "http://localhost:3000"
-           }/api/items/${idUsuario}/imagen`,*/
-
-          // `http://localhost:3000/api/items/${idUsuario}/imagen`,
+        const respuesta = await fetch( 
+          `${false
+          ? "https://tusoat-backend.onrender.com"
+          : "http://localhost:3000"
+        }/api/items`,
+          //"https://tusoat-backend.onrender.com/api/items",
         {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            imagen: urlImagen
-         })
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(datosRegistro)
         }
        );
 
-      const resultadoImagen = await respuestaImagen.json();
+       // Leemos la respuesta original de Express
+      const textoRespuesta = await respuesta.text();
 
-      console.log("Respuesta de la imagen:", resultadoImagen);
-      // cuando tenemos la repuesta de express y todo sale correcto lo almacenamos en localstorage para remover lacase que tiene display none 
-       localStorage.setItem("registroCompletado", "true");
-      //guardamos toda la repusta del registro para utilizarla en localStorage y poder utilizarla en otra pagina
-       
+      console.log("Estado HTTP:", respuesta.status);
+      console.log("Respuesta original de Express:", textoRespuesta);
 
-       // AQUÍ guardamos el usuario actualizado con la imagen
-      localStorage.setItem("usuarioRegistrado",JSON.stringify(resultadoImagen.usuario));
+      // Convertimos la respuesta a JSON
+       const resultado = JSON.parse(textoRespuesta);
 
+    // Comprobamos si el servidor respondió correctamente
+    if (!respuesta.ok) {
+        throw new Error(
+            resultado.mensaje || "No se pudo completar el registro"
+        );
+    }
 
-        ventiladorMalo.reset();
+    console.log("Usuario registrado:", resultado);
 
-        localStorage.setItem("mensajeConfirmacion", "¡Registro exitoso!");
-        window.location.href = "./confirmacionRegistro.html";
+    // Guardamos el registro completado
+    localStorage.setItem("registroCompletado", "true");
 
-       } catch (error) {
-       console.error("Error al registrar:", error);
+    // Guardamos los datos del usuario
+    localStorage.setItem(
+        "usuarioRegistrado",
+        JSON.stringify(resultado.registrousuario)
+    );
 
-       mateo.textContent = "Ocurrió un error al enviar tus datos. Inténtalo nuevamente.";
+    // Reiniciamos el formulario
+    ventiladorMalo.reset();
 
-       setTimeout(() => {
-       mateo.textContent = "";
-       }, 5000);
-      }
-   })
-  
-//
+    // Guardamos el mensaje de confirmación
+    localStorage.setItem(
+        "mensajeConfirmacion",
+        "¡Registro exitoso!"
+    );
+
+    // Redirigimos a la página de confirmación
+    window.location.href = "./confirmacionRegistro.html";
+
+} catch (error) {
+
+    console.error("Error al registrar:", error);
+
+    mateo.textContent = "Ocurrió un error: " + error.message;
+
+    setTimeout(() => {
+        mateo.textContent = "";
+    }, 5000);
+  }
+ });
